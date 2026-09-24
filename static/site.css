@@ -110,9 +110,9 @@
   /* ---- Act 1: the picture board (Sian, 17 Sep: "have we lost the picture board?") */
   /* Eight of her new photographs, 4 x 2 (2 x 4 on a phone), easing in as the
      pin runs; the headline plate sits over the left side. */
-  .board { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 3px; background: var(--sc-canvas); transform: scale(calc(1.06 - var(--sc-p, 0) * .06)); }
-  .board img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; min-height: 0; }
-  @media (max-width: 720px) { .board { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); } }
+  .board { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 3px; background: var(--sc-canvas);   /* minmax(0,…): Safari otherwise lets the photos stretch the rows (iPhone showed slivers, 24 Sep) */ transform: scale(calc(1.06 - var(--sc-p, 0) * .06)); }
+  .board img { display: block; width: 100%; height: auto; align-self: stretch; object-fit: cover; object-position: 50% 30%; min-height: 0; }   /* stretch, not height:100%: Safari resolves the % against the whole board */
+  @media (max-width: 720px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); } .board img:nth-child(n+7) { display: none; } }   /* a phone: six bigger photos, not eight slivers */
   @media (prefers-reduced-motion: reduce) { .board { transform: none; } }
   .floor .kicker { font: 800 clamp(1.1rem, 1.8vw, 1.6rem)/1 var(--sc-font-display); letter-spacing: .02em; text-transform: none; }   /* Sian: "CrossFit Warrington in blue" */
 
@@ -232,7 +232,7 @@
   .coach figcaption { padding: .9rem 1rem 1.1rem; }
   .coach--lead { width: clamp(34rem, 48vw, 44rem); display: grid; grid-template-columns: 5fr 7fr; align-items: stretch; }   /* Sian's card carries her full bio, photo beside it */
   .coach { overflow: hidden; } .coach figcaption { position: relative; z-index: 1; background: var(--sc-surface); background-image: var(--wire-h); }
-  .coach--lead img { height: 100%; aspect-ratio: auto; }
+  .coach--lead img { height: auto; align-self: stretch; aspect-ratio: auto; }
   .coach img.zoom { transform: scale(1.9); }   /* two full-length shots brought up to the same head size as the rest */
   .coach b { display: block; font: 800 clamp(1.1rem, 1.4vw, 1.3rem)/1.1 var(--sc-font-display); color: var(--accent); }
   .coach small { display: block; margin-top: .3rem; font: 700 .62rem/1.3 var(--font-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--silver); }
