@@ -1,7 +1,6 @@
 [
   { "label": "Join us", "url": "/#doors" },
-  { "label": "Timetable", "url": "/timetable" },
-  { "label": "Classes", "url": "/crossfit-classes" },
+  { "label": "Timetable", "url": "/#day" },
   { "label": "Find us", "url": "/location" },
   { "label": "Blog", "url": "/blog" }
 ]
