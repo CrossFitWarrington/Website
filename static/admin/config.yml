@@ -147,6 +147,7 @@ collections:
               - { name: text, label: Words, widget: text }
               - { name: button, label: "Button", widget: string }
               - { name: button_note, label: "Small line in the button", widget: string }
+              - { name: more_link, label: "Link to the drop-in page", widget: string }
           - name: community
             label: "4. No egos here"
             widget: object

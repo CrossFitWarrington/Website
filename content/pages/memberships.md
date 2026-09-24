@@ -2,14 +2,11 @@
 title: Membership Prices in Warrington | CrossFit Warrington
 description: Membership options at CrossFit Warrington in Woolston. Flexible plans for all ages and abilities, from first session to full-time training.
 kicker: Memberships
-heading: From First Steps to Forever Fit
-intro: All ages welcome.
+heading: Membership Options
 photo: /assets/r6-32.jpg
 photo_description: Two CrossFit Warrington members smiling side by side
 photo_position: 50% 15%
 ---
-
-## Membership Options
 
 ### Getting Started
 

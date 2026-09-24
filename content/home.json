@@ -5,14 +5,38 @@
     "kicker": "CrossFit Warrington",
     "heading": "Find your pace, your people, and a workout that adapts to you.",
     "photos": [
-      { "image": "/assets/r6-03.jpg", "position": "" },
-      { "image": "/assets/r6-01.jpg", "position": "50% 4%" },
-      { "image": "/assets/r6-34.jpg", "position": "" },
-      { "image": "/assets/r6-14.jpg", "position": "" },
-      { "image": "/assets/r6-25.jpg", "position": "" },
-      { "image": "/assets/r6-05.jpg", "position": "" },
-      { "image": "/assets/r6-24.jpg", "position": "" },
-      { "image": "/assets/r6-37.jpg", "position": "" }
+      {
+        "image": "/assets/r6-03.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-01.jpg",
+        "position": "50% 4%"
+      },
+      {
+        "image": "/assets/r6-34.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-14.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-25.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-05.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-24.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r6-37.jpg",
+        "position": ""
+      }
     ]
   },
   "turn": {
@@ -41,8 +65,18 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Book Foundations", "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Plan-8965" },
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20One%20to%20One%20Foundations." }
+          {
+            "label": "Book Foundations",
+            "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Plan-8965"
+          },
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20One%20to%20One%20Foundations."
+          },
+          {
+            "label": "Find out more",
+            "url": "/new-to-crossfit"
+          }
         ]
       },
       {
@@ -55,8 +89,18 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Book Couch to CrossFit", "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?code=1dd1fed0d41c6ff9&purchasable=Pass-4654" },
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit." }
+          {
+            "label": "Book Couch to CrossFit",
+            "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?code=1dd1fed0d41c6ff9&purchasable=Pass-4654"
+          },
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit."
+          },
+          {
+            "label": "Find out more",
+            "url": "/couch-to-crossfit"
+          }
         ]
       },
       {
@@ -69,8 +113,14 @@
         "price_line": "Memberships start from as little as £65.92.",
         "tall": true,
         "links": [
-          { "label": "Membership prices", "url": "/memberships" },
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20memberships." }
+          {
+            "label": "Membership prices",
+            "url": "/memberships"
+          },
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20memberships."
+          }
         ]
       },
       {
@@ -83,7 +133,14 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Kids%20classes%20and%20dates." }
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Kids%20classes%20and%20dates."
+          },
+          {
+            "label": "Find out more",
+            "url": "/crossfit-kids"
+          }
         ]
       },
       {
@@ -96,7 +153,14 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." }
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes."
+          },
+          {
+            "label": "Find out more",
+            "url": "/adaptive-crossfit"
+          }
         ]
       },
       {
@@ -109,8 +173,18 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Book here", "url": "https://www.wodboard.com/locations/620/workshops/bfa9cff5c7" },
-          { "label": "WhatsApp us for dates", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20RACE%20Series%20dates." }
+          {
+            "label": "Book here",
+            "url": "https://www.wodboard.com/locations/620/workshops/bfa9cff5c7"
+          },
+          {
+            "label": "WhatsApp us for dates",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20RACE%20Series%20dates."
+          },
+          {
+            "label": "Find out more",
+            "url": "/race-series"
+          }
         ]
       },
       {
@@ -123,7 +197,14 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Nutrition%20Coaching." }
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Nutrition%20Coaching."
+          },
+          {
+            "label": "Find out more",
+            "url": "/nutrition-coaching"
+          }
         ]
       },
       {
@@ -136,7 +217,14 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Personal%20Training." }
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Personal%20Training."
+          },
+          {
+            "label": "Find out more",
+            "url": "/personal-training"
+          }
         ]
       },
       {
@@ -149,7 +237,14 @@
         "price_line": "",
         "tall": false,
         "links": [
-          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Online%20Coaching." }
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Online%20Coaching."
+          },
+          {
+            "label": "Find out more",
+            "url": "/online-coaching"
+          }
         ]
       }
     ]
@@ -159,7 +254,8 @@
     "heading": "Drop in.",
     "text": "In town for work or play? Keep your fitness on track. Experienced CrossFitters can drop into any class and immediately feel like part of the CrossFit Warrington family.",
     "button": "Book a drop-in",
-    "button_note": "Pick any class on the timetable."
+    "button_note": "Pick any class on the timetable.",
+    "more_link": "More about dropping in"
   },
   "community": {
     "photo": "/assets/r6-28.jpg",
@@ -172,62 +268,215 @@
     "heading": "Our community.",
     "rating_line": "4.9 from 51 Google reviews",
     "featured": [
-      { "quote": "I'm doing moves I never thought I could ever do again. Age 62.", "name": "Gill, Google review" },
-      { "quote": "When I walked in I had an expectation of what you see on TV. The reality was entirely different.", "name": "Nick, Google review" },
-      { "quote": "Despite feeling anxious I was made very welcome and quickly felt like I belonged.", "name": "Rhiannon, Google review" }
+      {
+        "quote": "I'm doing moves I never thought I could ever do again. Age 62.",
+        "name": "Gill, Google review"
+      },
+      {
+        "quote": "When I walked in I had an expectation of what you see on TV. The reality was entirely different.",
+        "name": "Nick, Google review"
+      },
+      {
+        "quote": "Despite feeling anxious I was made very welcome and quickly felt like I belonged.",
+        "name": "Rhiannon, Google review"
+      }
     ],
-    "faces": ["/assets/r6-21.jpg", "/assets/r6-32.jpg", "/assets/r6-27.jpg"],
+    "faces": [
+      "/assets/r6-21.jpg",
+      "/assets/r6-32.jpg",
+      "/assets/r6-27.jpg"
+    ],
     "wall": [
-      { "quote": "As someone who started with little to no experience in a gym and was quite anxious about working out, CrossFit Warrington have been amazing in their support and training.", "name": "Georgina, Google review", "photo": "" },
-      { "quote": "Honestly the best decision I ever made was joining CFW. Sian and the team have completely changed my mindset on fitness and life.", "name": "Danielle, Google review", "photo": "" },
-      { "quote": "", "name": "", "photo": "/assets/r6-29.jpg" },
-      { "quote": "It feels like home. Super friendly CrossFit affiliate. Highly qualified coaches.", "name": "Mário, Google review", "photo": "" },
-      { "quote": "I joined CFW in August 2023 following a difficult pregnancy... Sian and the team at CFW have worked so hard in building my strength back up so I can safely carry my child.", "name": "Natalie, Google review", "photo": "" },
-      { "quote": "My tribe. My vibe. This place is more than a place to get fit. It's a family. People who support you, lift you up physically and mentally!!", "name": "Lana, Google review", "photo": "" },
-      { "quote": "", "name": "", "photo": "/assets/r6-08.jpg" },
-      { "quote": "Had a PT session. Sian was incredibly supportive. The gym is inviting and I was instantly put at ease.", "name": "Rachel, Google review", "photo": "" },
-      { "quote": "CrossFit Warrington is a community first before it's a gym, which is what differentiates it from other gyms.", "name": "Charlotte, Google review", "photo": "" },
-      { "quote": "People of all ages and abilities feel comfortable at the gym and the workouts are tailored.", "name": "Amelia, Google review", "photo": "" },
-      { "quote": "", "name": "", "photo": "/assets/r6-36.jpg" },
-      { "quote": "Everyone makes you feel welcome when you first join, can not fault it at all!", "name": "Adam, Google review", "photo": "" },
-      { "quote": "Really welcoming and supportive! Coaches are always able to scale different movements to your ability.", "name": "Emily, Google review", "photo": "" },
-      { "quote": "Very friendly and inclusive! Can't fault it at all!", "name": "Sarah, Google review", "photo": "" },
-      { "quote": "", "name": "", "photo": "/assets/r6-26.jpg" },
-      { "quote": "It's been the best decision I have made in terms of improving my fitness.", "name": "Lisa, Google review", "photo": "" },
-      { "quote": "I started Couch to CrossFit in January — it's the only place I've seen offer such a gentle, supportive intro to CrossFit. After the 5-week course, I was hooked and joined properly. Even though there's a CrossFit gym 2 minutes from me, I choose to travel 20 minutes to CrossFit Warrington.", "name": "Claire, site testimonial", "photo": "" }
+      {
+        "quote": "As someone who started with little to no experience in a gym and was quite anxious about working out, CrossFit Warrington have been amazing in their support and training.",
+        "name": "Georgina, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "Honestly the best decision I ever made was joining CFW. Sian and the team have completely changed my mindset on fitness and life.",
+        "name": "Danielle, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r6-29.jpg"
+      },
+      {
+        "quote": "It feels like home. Super friendly CrossFit affiliate. Highly qualified coaches.",
+        "name": "Mário, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "I joined CFW in August 2023 following a difficult pregnancy... Sian and the team at CFW have worked so hard in building my strength back up so I can safely carry my child.",
+        "name": "Natalie, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "My tribe. My vibe. This place is more than a place to get fit. It's a family. People who support you, lift you up physically and mentally!!",
+        "name": "Lana, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r6-08.jpg"
+      },
+      {
+        "quote": "Had a PT session. Sian was incredibly supportive. The gym is inviting and I was instantly put at ease.",
+        "name": "Rachel, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "CrossFit Warrington is a community first before it's a gym, which is what differentiates it from other gyms.",
+        "name": "Charlotte, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "People of all ages and abilities feel comfortable at the gym and the workouts are tailored.",
+        "name": "Amelia, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r6-36.jpg"
+      },
+      {
+        "quote": "Everyone makes you feel welcome when you first join, can not fault it at all!",
+        "name": "Adam, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "Really welcoming and supportive! Coaches are always able to scale different movements to your ability.",
+        "name": "Emily, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "Very friendly and inclusive! Can't fault it at all!",
+        "name": "Sarah, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r6-26.jpg"
+      },
+      {
+        "quote": "It's been the best decision I have made in terms of improving my fitness.",
+        "name": "Lisa, Google review",
+        "photo": ""
+      },
+      {
+        "quote": "I started Couch to CrossFit in January — it's the only place I've seen offer such a gentle, supportive intro to CrossFit. After the 5-week course, I was hooked and joined properly. Even though there's a CrossFit gym 2 minutes from me, I choose to travel 20 minutes to CrossFit Warrington.",
+        "name": "Claire, site testimonial",
+        "photo": ""
+      }
     ]
   },
   "coaches_heading": "Meet the coaches.",
   "day": {
     "heading": "The day at the gym.",
     "classes": [
-      { "time": "05:30", "text": "CrossFit Class: Dawn patrol. Monday to Friday.", "link": "" },
-      { "time": "06:30", "text": "CrossFit Class: Pre rush hour. Monday to Friday.", "link": "" },
-      { "time": "09:30", "text": "CrossFit Class: Mid-morning crew. Monday and Friday.", "link": "" },
-      { "time": "10:00", "text": "Adaptive CrossFit. Thursday.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." },
-      { "time": "11:00", "text": "Adaptive CrossFit. Monday.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." },
-      { "time": "13:30", "text": "CrossFit Class: Family. Little legends and lifters. Monday.", "link": "" },
-      { "time": "16:30", "text": "CrossFit Class: Afternoon action. Monday to Friday.", "link": "" },
-      { "time": "18:00", "text": "CrossFit Class: Evening escape. Monday to Friday.", "link": "" },
-      { "time": "19:00", "text": "CrossFit Class: Evening finisher. Monday and Wednesday.", "link": "" }
+      {
+        "time": "05:30",
+        "text": "CrossFit Class: Dawn patrol. Monday to Friday.",
+        "link": ""
+      },
+      {
+        "time": "06:30",
+        "text": "CrossFit Class: Pre rush hour. Monday to Friday.",
+        "link": ""
+      },
+      {
+        "time": "09:30",
+        "text": "CrossFit Class: Mid-morning crew. Monday and Friday.",
+        "link": ""
+      },
+      {
+        "time": "10:00",
+        "text": "Adaptive CrossFit. Thursday.",
+        "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes."
+      },
+      {
+        "time": "11:00",
+        "text": "Adaptive CrossFit. Monday.",
+        "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes."
+      },
+      {
+        "time": "13:30",
+        "text": "CrossFit Class: Family. Little legends and lifters. Monday.",
+        "link": ""
+      },
+      {
+        "time": "16:30",
+        "text": "CrossFit Class: Afternoon action. Monday to Friday.",
+        "link": ""
+      },
+      {
+        "time": "18:00",
+        "text": "CrossFit Class: Evening escape. Monday to Friday.",
+        "link": ""
+      },
+      {
+        "time": "19:00",
+        "text": "CrossFit Class: Evening finisher. Monday and Wednesday.",
+        "link": ""
+      }
     ],
     "weekend_heading": "Weekend and Bank Holiday",
     "weekend_classes": [
-      { "time": "08:00", "text": "CrossFit Class: The weekend warriors. Saturday.", "link": "" },
-      { "time": "08:00", "text": "CrossFit Kids. Six-week blocks, Sundays throughout the year.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20the%20Sunday%20Kids%20course%20dates." },
-      { "time": "09:00", "text": "Couch to CrossFit. Six-week courses, Sundays throughout the year.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit." }
+      {
+        "time": "08:00",
+        "text": "CrossFit Class: The weekend warriors. Saturday.",
+        "link": ""
+      },
+      {
+        "time": "08:00",
+        "text": "CrossFit Kids. Six-week blocks, Sundays throughout the year.",
+        "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20the%20Sunday%20Kids%20course%20dates."
+      },
+      {
+        "time": "09:00",
+        "text": "Couch to CrossFit. Six-week courses, Sundays throughout the year.",
+        "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit."
+      }
     ],
     "button": "Book your free trial class",
     "button_note": "Pick any class. Takes a minute.",
     "photos": [
-      { "image": "/assets/r6-09.jpg", "position": "50% 25%" },
-      { "image": "/assets/r6-03.jpg", "position": "50% 35%" },
-      { "image": "/assets/r6-34.jpg", "position": "50% 25%" },
-      { "image": "/assets/r6-35.jpg", "position": "50% 40%" },
-      { "image": "/assets/r6-28.jpg", "position": "50% 30%" },
-      { "image": "/assets/r6-27.jpg", "position": "50% 25%" },
-      { "image": "/assets/r6-24.jpg", "position": "50% 40%" },
-      { "image": "/assets/r6-25.jpg", "position": "50% 40%" }
+      {
+        "image": "/assets/r6-09.jpg",
+        "position": "50% 25%"
+      },
+      {
+        "image": "/assets/r6-03.jpg",
+        "position": "50% 35%"
+      },
+      {
+        "image": "/assets/r6-34.jpg",
+        "position": "50% 25%"
+      },
+      {
+        "image": "/assets/r6-35.jpg",
+        "position": "50% 40%"
+      },
+      {
+        "image": "/assets/r6-28.jpg",
+        "position": "50% 30%"
+      },
+      {
+        "image": "/assets/r6-27.jpg",
+        "position": "50% 25%"
+      },
+      {
+        "image": "/assets/r6-24.jpg",
+        "position": "50% 40%"
+      },
+      {
+        "image": "/assets/r6-25.jpg",
+        "position": "50% 40%"
+      }
     ]
   },
   "faq_heading": "FAQs.",

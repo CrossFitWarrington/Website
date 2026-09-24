@@ -1,16 +1,10 @@
 <script src="/scrollcraft.js"></script>
 <script>
   ScrollCraft.mount(document.body);
-  // the menu: one button on a phone, dropdowns on a laptop (click or hover)
+  // the menu button on a phone
   (function () {
     var btn = document.querySelector('.menu-btn');
     btn.addEventListener('click', function () { var o = document.body.classList.toggle('nav-open'); btn.setAttribute('aria-expanded', o); });
-    var groups = document.querySelectorAll('.nav__group');
-    groups.forEach(function (g) {
-      var b = g.querySelector('button');
-      b.addEventListener('click', function (e) { e.stopPropagation(); var o = !g.classList.contains('open'); groups.forEach(function (x) { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); }); g.classList.toggle('open', o); b.setAttribute('aria-expanded', o); });
-    });
-    document.addEventListener('click', function () { groups.forEach(function (x) { x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded', 'false'); }); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') document.dispatchEvent(new Event('click')); });
+    document.querySelectorAll('.nav a').forEach(function (a) { a.addEventListener('click', function () { document.body.classList.remove('nav-open'); btn.setAttribute('aria-expanded', 'false'); }); });
   })();
 </script>
