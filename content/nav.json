@@ -1,0 +1,30 @@
+[
+  { "label": "Join us", "links": [
+    { "label": "New to CrossFit", "url": "/new-to-crossfit" },
+    { "label": "Experienced", "url": "/experienced-in-crossfit" },
+    { "label": "Memberships", "url": "/memberships" },
+    { "label": "Drop in", "url": "/drop-in" }
+  ] },
+  { "label": "Timetable", "url": "/timetable" },
+  { "label": "Classes", "links": [
+    { "label": "CrossFit classes", "url": "/crossfit-classes" },
+    { "label": "Couch to CrossFit", "url": "/couch-to-crossfit" },
+    { "label": "Personal training", "url": "/personal-training" },
+    { "label": "Nutrition coaching", "url": "/nutrition-coaching" },
+    { "label": "CrossFit Kids", "url": "/crossfit-kids" },
+    { "label": "Adaptive CrossFit", "url": "/adaptive-crossfit" },
+    { "label": "Online coaching", "url": "/online-coaching" },
+    { "label": "Group and team training", "url": "/team-training" },
+    { "label": "RACE Series", "url": "/race-series" }
+  ] },
+  { "label": "About us", "links": [
+    { "label": "What is CrossFit?", "url": "/what-is-crossfit" },
+    { "label": "Can I do CrossFit?", "url": "/can-i-do-crossfit" },
+    { "label": "Because of CrossFit", "url": "/because-of-crossfit" },
+    { "label": "Meet the coaches", "url": "/meet-our-coaches" },
+    { "label": "Find us", "url": "/location" },
+    { "label": "Shop", "url": "/shop" },
+    { "label": "FAQs", "url": "/faqs" }
+  ] },
+  { "label": "Blog", "url": "/blog" }
+]

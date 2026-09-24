@@ -1,0 +1,26 @@
+{{> head}}
+<body class="page post">
+{{> bar}}
+<main id="top">
+  <article>
+    <header class="act hub pagehead" data-sc-act="flow">
+      <div class="wrap pagehead__grid{{^post.photo}} pagehead__grid--solo{{/post.photo}}">
+        <div class="pagehead__text" data-sc-in>
+          <p class="kicker"><a href="/blog">Blog</a> · {{date_label}}{{#categories.length}} · {{categories_label}}{{/categories.length}}</p>
+          <h1>{{post.title}}</h1>
+          {{#post.author}}<p class="pagehead__intro">By {{post.author}}</p>{{/post.author}}
+        </div>
+        {{#post.photo}}<figure class="pagehead__photo" data-sc-in><img src="{{post.photo}}" alt="{{post.photo_description}}" width="1080" height="1350"></figure>{{/post.photo}}
+      </div>
+    </header>
+    <section class="act hub pagebody" data-sc-act="flow">
+      <div class="wrap"><div class="prose" data-sc-in>{{{body_html}}}</div>
+        <p class="backlink"><a class="second" href="/blog">More from the blog</a></p>
+      </div>
+    </section>
+  </article>
+  {{> pageclose}}
+</main>
+{{> scripts}}
+</body>
+</html>

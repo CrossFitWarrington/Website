@@ -1,0 +1,32 @@
+# Old GoDaddy addresses -> new pages (301 = moved for good, so Google carries the ranking across).
+# Blog posts are added automatically by build.mjs from each post's old_url.
+/home                         /                          301
+/visiting-nearby%3F-drop-in   /drop-in                   301
+/visiting-nearby              /drop-in                   301
+/what-is-crossfit%3F          /what-is-crossfit          301
+/can-i-do-crossfit%3F         /can-i-do-crossfit         301
+/crossfit-classes-1           /crossfit-classes          301
+/couch-to-crossfit-course-1   /couch-to-crossfit         301
+/nutrition-coaching-1         /nutrition-coaching        301
+/crossfit-kids-1              /crossfit-kids             301
+/online-coaching-1            /online-coaching           301
+/team%2Fgroup-training-1      /team-training             301
+/team/group-training-1        /team-training             301
+/r-a-c-e-hyrox-sim-1          /race-series               301
+/location-1                   /location                  301
+/cfw-shop-1                   /shop                      301
+/gym-charter                  /code-of-conduct           301
+/gym-rules-1                  /code-of-conduct           301
+/yoga-1                       /crossfit-classes          301
+/the-strong-girl-squad        /crossfit-kids             301
+/blog/f/*                     /blog                      301
+# the ten addresses that were already dead on the old site
+/team%2Fgroup-training        /team-training             301
+/team/group-training          /team-training             301
+/1-2-1-nutrition              /nutrition-coaching        301
+/membership-options           /memberships               301
+/yoga                         /crossfit-classes          301
+/i-am-new-to-crossfit         /new-to-crossfit           301
+/i-have-done-crossfit         /experienced-in-crossfit   301
+/cfw                          /                          301
+/foundations                  /new-to-crossfit           301

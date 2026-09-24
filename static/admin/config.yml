@@ -1,0 +1,280 @@
+# The editing screen at crossfitwarrington.com/admin.
+# Sian logs in with her GitHub account. Every "Publish" saves a change to the website's files,
+# and the site rebuilds itself about a minute later. The layout and colours can't be changed from here.
+local_backend: true   # only used when testing on this computer
+backend:
+  name: github
+  repo: CrossFitWarrington/Website
+  branch: main
+  base_url: https://api.netlify.com
+  commit_messages:
+    create: "Website: new {{collection}} \"{{slug}}\""
+    update: "Website: edited {{collection}} \"{{slug}}\""
+    delete: "Website: deleted {{collection}} \"{{slug}}\""
+    uploadMedia: "Website: new photo {{path}}"
+    deleteMedia: "Website: removed photo {{path}}"
+
+site_url: https://crossfitwarrington.com
+display_url: https://crossfitwarrington.com
+logo_url: /assets/cfw_mark_reversed.svg
+locale: en
+media_folder: static/assets
+public_folder: /assets
+
+collections:
+  # ---------------------------------------------------------------- blog
+  - name: blog
+    label: Blog posts
+    label_singular: Blog post
+    description: "Write a new post with the button on the right. Posts appear on the blog, newest first."
+    folder: content/blog
+    editor: { preview: false }
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    summary: "{{title}} ({{date}})"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "D MMMM YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - { name: author, label: "Written by", widget: string, required: false, default: "Sian Edwards, Owner" }
+      - { name: categories, label: Categories, widget: select, multiple: true, required: false, options: [Adaptive, Coaching, Community, CrossFit, CrossFit Kids, CrossFit Open, Health, Intern, "Men's health", Mental health, Nutrition, Resilience, School PE, Strength, "Women's health", Yoga] }
+      - { name: summary, label: "Short summary", widget: text, hint: "One or two sentences. Shown on the blog page and in Google results." }
+      - { name: photo, label: "Main photo", widget: image, required: false, choose_url: false }
+      - { name: photo_description, label: "Describe the photo", widget: string, required: false, hint: "What's in the photo, for people using screen readers. For example: Carol lifting a kettlebell with her grandchildren." }
+      - { name: old_url, label: "Old address", widget: hidden, required: false }
+      - { name: body, label: Post, widget: markdown, hint: "A link on its own line becomes a big blue button." }
+
+  # ---------------------------------------------------------------- pages
+  - name: pages
+    label: Pages
+    label_singular: Page
+    description: "The website's pages. Change the words and photos here. New pages are added by Trident, so they appear in the menu."
+    folder: content/pages
+    editor: { preview: false }
+    extension: md
+    format: frontmatter
+    create: false
+    delete: false
+    summary: "{{heading}}"
+    fields:
+      - { name: heading, label: "Page heading", widget: string }
+      - { name: kicker, label: "Small blue label above the heading", widget: string, required: false }
+      - { name: intro, label: "Line under the heading", widget: text, required: false }
+      - { name: photo, label: "Photo beside the heading", widget: image, required: false, choose_url: false }
+      - { name: photo_description, label: "Describe the photo", widget: string, required: false }
+      - { name: photo_position, label: "Photo framing (leave as it is)", widget: hidden, required: false }
+      - { name: title, label: "Title in Google results", widget: string, hint: "Keep it under about 60 characters." }
+      - { name: description, label: "Description in Google results", widget: text, hint: "One or two sentences, under about 155 characters." }
+      - { name: layout, label: Layout, widget: hidden, required: false }
+      - { name: noindex, label: Hidden from Google, widget: hidden, required: false }
+      - { name: body, label: "Page words", widget: markdown, required: false, hint: "A link on its own line becomes a big blue button." }
+
+  # ---------------------------------------------------------------- one-off files
+  - name: site
+    label: Homepage and site details
+    editor: { preview: false }
+    files:
+      - name: home
+        label: Homepage
+        file: content/home.json
+        fields:
+          - { name: seo_title, label: "Title in Google results", widget: string }
+          - { name: seo_description, label: "Description in Google results", widget: text }
+          - name: hero
+            label: "1. Top of the page"
+            widget: object
+            fields:
+              - { name: kicker, label: "Blue label", widget: string }
+              - { name: heading, label: Headline, widget: text }
+              - name: photos
+                label: "Picture board (8 photos)"
+                widget: list
+                min: 8
+                max: 8
+                fields:
+                  - { name: image, label: Photo, widget: image, choose_url: false }
+                  - { name: position, label: "Framing (leave as it is)", widget: hidden, required: false }
+          - name: turn
+            label: "2. Where fitness feels like home"
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: body, label: "First paragraph", widget: text }
+              - { name: middle, label: "Second panel (leave a blank line between paragraphs)", widget: text }
+              - { name: big, label: "Big line", widget: string }
+              - { name: big_line, label: "Line under the big line", widget: text }
+              - { name: photo_1, label: "Photo 1", widget: image, choose_url: false }
+              - { name: photo_2, label: "Photo 2", widget: image, choose_url: false }
+              - { name: photo_3, label: "Photo 3", widget: image, choose_url: false }
+          - name: join
+            label: "3. Join us"
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: kicker, label: "Blue label", widget: string }
+              - { name: subheading, label: "Blue heading", widget: string }
+              - { name: intro, label: "Intro", widget: text }
+              - name: tiles
+                label: "The tiles"
+                label_singular: tile
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: title, label: Title, widget: string }
+                  - { name: label, label: "Small label above the title", widget: string, required: false }
+                  - { name: photo, label: Photo, widget: image, choose_url: false }
+                  - { name: photo_description, label: "Describe the photo", widget: string }
+                  - { name: position, label: "Framing (leave as it is)", widget: hidden, required: false }
+                  - { name: text, label: "Words (**bold** for bold, a blank line between paragraphs)", widget: text }
+                  - { name: price_line, label: "Price line", widget: string, required: false }
+                  - { name: tall, label: "Tall tile (the membership tile)", widget: boolean, required: false }
+                  - name: links
+                    label: "Links (the first one makes the whole tile clickable)"
+                    widget: list
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { name: label, label: Words, widget: string }
+                      - { name: url, label: "Web address", widget: string }
+          - name: drop_in
+            label: "Drop in panel"
+            widget: object
+            fields:
+              - { name: kicker, label: "Blue label", widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: text, label: Words, widget: text }
+              - { name: button, label: "Button", widget: string }
+              - { name: button_note, label: "Small line in the button", widget: string }
+          - name: community
+            label: "4. No egos here"
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: text, label: Words, widget: text }
+              - { name: photo, label: Photo, widget: image, choose_url: false }
+              - { name: photo_description, label: "Describe the photo", widget: string }
+          - name: reviews
+            label: "5. Our community (reviews)"
+            widget: object
+            fields:
+              - { name: kicker, label: "Blue label", widget: string }
+              - { name: heading, label: Heading, widget: string }
+              - { name: rating_line, label: "Google rating line", widget: string, hint: "Update this when the rating or number of reviews changes." }
+              - name: featured
+                label: "The three reviews that rotate"
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { name: quote, label: Review, widget: text }
+                  - { name: name, label: "Name and source", widget: string }
+              - { name: faces, label: "Three photos under the reviews", widget: list, field: { name: image, label: Photo, widget: image, choose_url: false } }
+              - name: wall
+                label: "The review wall (a review, or a photo)"
+                widget: list
+                summary: "{{fields.name}}{{fields.photo}}"
+                fields:
+                  - { name: quote, label: "Review (leave empty for a photo)", widget: text, required: false }
+                  - { name: name, label: "Name and source", widget: string, required: false }
+                  - { name: photo, label: "Photo (only if there's no review)", widget: image, required: false, choose_url: false }
+          - { name: coaches_heading, label: "6. Coaches heading (the coaches are edited under Coaches)", widget: string }
+          - name: day
+            label: "7. The day at the gym"
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - name: classes
+                label: "Weekday classes"
+                widget: list
+                summary: "{{fields.time}} {{fields.text}}"
+                fields:
+                  - { name: time, label: Time, widget: string }
+                  - { name: text, label: Class, widget: string }
+                  - { name: link, label: "Link (leave empty to book a free class)", widget: string, required: false }
+              - { name: weekend_heading, label: "Weekend heading", widget: string }
+              - name: weekend_classes
+                label: "Weekend classes"
+                widget: list
+                summary: "{{fields.time}} {{fields.text}}"
+                fields:
+                  - { name: time, label: Time, widget: string }
+                  - { name: text, label: Class, widget: string }
+                  - { name: link, label: "Link (leave empty to book a free class)", widget: string, required: false }
+              - { name: button, label: Button, widget: string }
+              - { name: button_note, label: "Small line in the button", widget: string }
+              - name: photos
+                label: "Rolling photos"
+                widget: list
+                fields:
+                  - { name: image, label: Photo, widget: image, choose_url: false }
+                  - { name: position, label: "Framing (leave as it is)", widget: hidden, required: false }
+          - { name: faq_heading, label: "8. FAQs heading (the questions are edited under FAQs)", widget: string }
+          - name: close
+            label: "9. Your first class is free"
+            widget: object
+            fields:
+              - { name: heading, label: Heading, widget: string }
+              - { name: line, label: "Line under it", widget: string }
+              - { name: button, label: Button, widget: string }
+              - { name: button_note, label: "Small line in the button", widget: string }
+              - { name: second, label: "WhatsApp line", widget: string }
+              - { name: photo, label: Photo, widget: image, choose_url: false }
+
+      - name: coaches
+        label: Coaches
+        file: content/coaches.json
+        fields:
+          - { name: heading, label: "Coaches page heading", widget: string }
+          - name: coaches
+            label: Coaches
+            label_singular: coach
+            widget: list
+            summary: "{{fields.name}}: {{fields.role}}"
+            hint: "Drag to change the order. The order is the same on the homepage and the coaches page."
+            fields:
+              - { name: name, label: Name, widget: string }
+              - { name: role, label: "Role (homepage)", widget: string, hint: "For example: CrossFit Level 1 Trainer" }
+              - { name: qualifications, label: "Qualifications", widget: string, required: false, hint: "For example: CF-L1" }
+              - { name: experience, label: "Experience line (coaches page)", widget: string, required: false }
+              - { name: bio, label: "About them (coaches page)", widget: text }
+              - { name: homepage_text, label: "Longer homepage text (Sian only; leave empty for everyone else)", widget: text, required: false }
+              - { name: photo, label: Photo, widget: image, choose_url: false, hint: "A square photo works best." }
+              - { name: photo_zoom, label: "Zoom in (for full-length photos)", widget: boolean, required: false }
+              - { name: photo_focus, label: "Zoom point (leave as it is)", widget: hidden, required: false }
+
+      - name: faqs
+        label: FAQs
+        file: content/faqs.json
+        fields:
+          - { name: heading, label: Heading, widget: string }
+          - { name: intro, label: "Intro (a blank line between paragraphs)", widget: text }
+          - { name: ask, label: "Line about emailing us", widget: string }
+          - name: questions
+            label: Questions
+            label_singular: question
+            widget: list
+            summary: "{{fields.question}}"
+            fields:
+              - { name: question, label: Question, widget: string }
+              - { name: answer, label: "Answer (a blank line between paragraphs)", widget: text }
+
+      - name: settings
+        label: "Contact details and booking links"
+        file: content/settings.json
+        fields:
+          - { name: phone, label: "Phone number", widget: string }
+          - { name: whatsapp, label: "WhatsApp number", widget: string }
+          - { name: email, label: Email, widget: string }
+          - { name: address, label: Address, widget: string }
+          - { name: hours, label: "Opening hours", widget: string }
+          - { name: claim, label: "First line of the footer", widget: string }
+          - { name: free_class_url, label: "Free class booking link (WodBoard)", widget: string }
+          - { name: dropin_url, label: "Drop-in booking link (WodBoard)", widget: string }
+          - { name: timetable_embed, label: "WodBoard timetable link", widget: string }
+          - { name: instagram, label: Instagram, widget: string }
+          - { name: facebook, label: Facebook, widget: string }
+          - { name: youtube, label: YouTube, widget: string }
+          - { name: app_store, label: "WodBoard app (Apple)", widget: string }
+          - { name: google_play, label: "WodBoard app (Android)", widget: string }
+          - { name: umami_id, label: "Visitor stats id", widget: hidden, required: false }

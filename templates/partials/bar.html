@@ -1,0 +1,11 @@
+<header class="bar">
+  <a class="mark" href="/" aria-label="CrossFit Warrington home"><img src="/assets/cfw_lockup_horizontal_reversed.svg" alt="CrossFit Warrington"></a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+  <nav class="nav" id="site-nav" aria-label="Main">
+    {{#nav}}
+    {{#url}}<a class="nav__top" href="{{url}}">{{label}}</a>{{/url}}
+    {{#links.length}}<div class="nav__group"><button class="nav__top" type="button" aria-expanded="false">{{label}}</button><ul class="nav__menu">{{#links}}<li><a href="{{url}}">{{label}}</a></li>{{/links}}</ul></div>{{/links.length}}
+    {{/nav}}
+  </nav>
+  <a class="topcta" href="{{site.free_class_url}}">Your first class is <em>free</em></a>
+</header>

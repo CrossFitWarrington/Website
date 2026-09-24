@@ -1,0 +1,137 @@
+{
+  "heading": "The CrossFit Warrington team",
+  "coaches": [
+    {
+      "name": "Sian Edwards",
+      "role": "Founder & Head Coach",
+      "qualifications": "CF-L2 · Precision Nutrition L1",
+      "experience": "Owner & Coach | 25 years experience in teaching | PT | Nutrition coach | Special populations",
+      "homepage_text": "Sian founded CrossFit Warrington with a clear mission: to build a welcoming, ego-free community where everyday people can discover what they're truly capable of.\n\nA CrossFit Level 2 and Precision Nutrition Coach with a 25-year teaching background and specialised rehabilitation expertise, Sian brings immense care and knowledge to the floor. Whether she's coaching daily classes, competing as a Masters athlete, or empowering the next generation through the Strong Girl Squad, Sian is dedicated to helping you build long-term strength, resilience, and confidence.",
+      "bio": "In 2022, I founded CrossFit Warrington to build a supportive, goal-driven community. I'm a CrossFit Level 2 Coach, Precision Nutrition Coach, and specialist in cardiac rehab, stroke rehab, and special populations. My passion is helping people push past limits, embrace challenges, and achieve what once felt impossible. Fitness is just the start—we focus on building confidence, resilience, and lasting change.",
+      "photo": "/assets/coach-sian.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Faye Gaskin",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 18 years teaching and coaching experience | Qualified Teacher | Specialises in CrossFit Kids and Sports Performance",
+      "homepage_text": "",
+      "bio": "Faye is a dedicated and enthusiastic coach at CrossFit Warrington, specialising in CrossFit Kids and Sports Performance training. With years of experience in helping individuals of all ages reach their potential, Faye is passionate about creating a supportive, engaging, and fun environment where everyone can thrive.",
+      "photo": "/assets/coach-faye.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Ben Ecob",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 4 years coaching experience | Specialises in pre and post natal and family class",
+      "homepage_text": "",
+      "bio": "Ben is a compassionate and experienced CrossFit coach at CrossFit Warrington, with a strong focus on CrossFit Family and Pre/Postnatal Fitness. His approachable and inclusive coaching style ensures that all members feel supported, empowered, and confident on their fitness journey.",
+      "photo": "/assets/coach-ben.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Sally Forrester",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach & Member Retention & Engagement Lead | 3 years coaching experience",
+      "homepage_text": "",
+      "bio": "Sally is a passionate CrossFit coach who helps athletes reach their goals through smart training and community support. She keeps members motivated and connected by building strong relationships and organising events that bring the CrossFit Warrington community together.",
+      "photo": "/assets/coach-sally.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Dan Andrews",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 18 months coaching experience | Specialises in Personal Training",
+      "homepage_text": "",
+      "bio": "With a strong commitment to movement quality and encouragement, Dan helps athletes build confidence, improve technique, and enjoy their training. He thrives on being part of the CrossFit Warrington community and is always ready to lend a hand, offer motivation, and learn from those around him.",
+      "photo": "/assets/coach-dan.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Jade Maher",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 18 months coaching experience",
+      "homepage_text": "",
+      "bio": "Jade is a Level 1 Coach with a true passion for weightlifting and gymnastics. She thrives on helping athletes unlock their potential — whether that’s hitting a new lift, mastering a bodyweight skill, or simply moving with more confidence.",
+      "photo": "/assets/coach-jade.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Jess Swindles",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 3 years coaching experience | Qualified teacher | Specialises in CrossFit Kids and Couch to CrossFit",
+      "homepage_text": "",
+      "bio": "Jess is a passionate and energetic CrossFit Kids coach who believes in making fitness fun while instilling important life skills such as teamwork, discipline, and confidence in young athletes. With a background in both education and CrossFit, Jess combines her love for teaching with her dedication to helping children develop a positive relationship with fitness.",
+      "photo": "/assets/coach-jess.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Lu Firman",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Coach | 18 months coaching experience",
+      "homepage_text": "",
+      "bio": "Lu is an enthusiastic and driven CrossFit coach, passionate about empowering athletes to reach their full potential through effective training and a strong sense of community.",
+      "photo": "/assets/coach-lu.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Carol Forrester",
+      "role": "CrossFit Level 1 Trainer",
+      "qualifications": "CF-L1",
+      "experience": "Adaptive Coach",
+      "homepage_text": "",
+      "bio": "Carol is a compassionate and experienced CrossFit coach dedicated to helping older athletes and adaptive athletes unlock their full potential through functional fitness.",
+      "photo": "/assets/coach-carol.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Dr Sarah Plant",
+      "role": "Adaptive Physio",
+      "qualifications": "",
+      "experience": "Adaptive Coach & Physiotherapist",
+      "homepage_text": "",
+      "bio": "Sarah is a skilled Physiotherapist and passionate Adaptive CrossFit coach, dedicated to helping individuals overcome physical challenges and reach their fitness goals. Sarah combines her expertise in physiotherapy with her love for functional fitness to create tailored programs for adaptive athletes.",
+      "photo": "/assets/coach-sarah.jpg",
+      "photo_zoom": false,
+      "photo_focus": ""
+    },
+    {
+      "name": "Dani Merritt",
+      "role": "Intern and developing coach",
+      "qualifications": "",
+      "experience": "Intern and developing coach",
+      "homepage_text": "",
+      "bio": "Dani embodies the inclusive, welcoming spirit of our community—ensuring every beginner feels supported from the moment they walk through our doors.",
+      "photo": "/assets/coach-dani.jpg",
+      "photo_zoom": true,
+      "photo_focus": "58% 8%"
+    },
+    {
+      "name": "Colette Wiles",
+      "role": "Intern and developing coach",
+      "qualifications": "",
+      "experience": "Intern and developing coach",
+      "homepage_text": "",
+      "bio": "With a huge passion for fitness and community, they are building their coaching expertise while helping guide our newest members through every step of their fitness journey.",
+      "photo": "/assets/coach-colette.jpg",
+      "photo_zoom": true,
+      "photo_focus": "56% 38%"
+    }
+  ]
+}

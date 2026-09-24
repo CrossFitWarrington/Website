@@ -1,0 +1,242 @@
+{
+  "seo_title": "Warrington's Only Official CrossFit Gym | CrossFit Warrington",
+  "seo_description": "Warrington's only official CrossFit affiliate, based in Woolston. Coaching for every age and ability. Your first class is free.",
+  "hero": {
+    "kicker": "CrossFit Warrington",
+    "heading": "Find your pace, your people, and a workout that adapts to you.",
+    "photos": [
+      { "image": "/assets/r6-03.jpg", "position": "" },
+      { "image": "/assets/r6-01.jpg", "position": "50% 4%" },
+      { "image": "/assets/r6-34.jpg", "position": "" },
+      { "image": "/assets/r6-14.jpg", "position": "" },
+      { "image": "/assets/r6-25.jpg", "position": "" },
+      { "image": "/assets/r6-05.jpg", "position": "" },
+      { "image": "/assets/r6-24.jpg", "position": "" },
+      { "image": "/assets/r6-37.jpg", "position": "" }
+    ]
+  },
+  "turn": {
+    "photo_1": "/assets/r6-25.jpg",
+    "photo_2": "/assets/r6-31.jpg",
+    "photo_3": "/assets/r6-30.jpg",
+    "heading": "Where fitness feels like home.",
+    "body": "We believe training should be something you actually look forward to. Whether you're stepping into a gym for the first time or you've been training for years, all of our sociable group classes are built around one simple principle: helping you move better, get fitter, and keep showing up. Led by expert coaches who know how to get the best out of every person who walks through the door, there's a class here waiting for you.",
+    "middle": "Our programmes are designed to suit all abilities and experience levels. Whether you're completely new to the gym, looking to improve your fitness, or training towards competitive goals, you'll have the coaching, programming and support to keep progressing.\n\nBut CrossFit Warrington is about more than just the workout.\n\nHere, you'll train alongside people who want to see you succeed. You'll be encouraged, challenged and supported every step of the way. We work hard, celebrate each other's progress and, most importantly, have a lot of fun doing it.",
+    "big": "You don't need to be fit to start. You just need to start.",
+    "big_line": "We scale workouts, we don't change them. Whoever you are, whatever you do, you are capable of CrossFit."
+  },
+  "join": {
+    "heading": "Join us.",
+    "kicker": "Two ways in. Both coached.",
+    "subheading": "How to join CrossFit Warrington",
+    "intro": "We believe fitness shouldn't be one-size-fits-all, and that starts from day one. Choose the path that best fits your confidence level and schedule:",
+    "tiles": [
+      {
+        "title": "One to One",
+        "label": "New to CrossFit · 1-2-1 Foundations · 3 × 1-to-1 sessions",
+        "photo": "/assets/r8-one-to-one.jpg",
+        "photo_description": "A member training one to one with a coach at CrossFit Warrington",
+        "position": "50% 20%",
+        "text": "You'll work privately with a coach over three sessions to master the core movements at your own pace before joining our group classes.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Book Foundations", "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Plan-8965" },
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20One%20to%20One%20Foundations." }
+        ]
+      },
+      {
+        "title": "Couch to CrossFit",
+        "label": "New to CrossFit · Group Foundations · 6-week course",
+        "photo": "/assets/r6-03.jpg",
+        "photo_description": "A Couch to CrossFit group celebrating together at the end of a session",
+        "position": "50% 35%",
+        "text": "You'll progress alongside a supportive cohort of beginners, building your fitness, community, and confidence together week by week.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Book Couch to CrossFit", "url": "https://www.wodboard.com/locations/620/signup/bfa9cff5c7?code=1dd1fed0d41c6ff9&purchasable=Pass-4654" },
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit." }
+        ]
+      },
+      {
+        "title": "Become a member",
+        "label": "Experienced",
+        "photo": "/assets/r6-32.jpg",
+        "photo_description": "Two CrossFit Warrington members smiling side by side",
+        "position": "50% 15%",
+        "text": "**Find the membership that fits your life.**\n\nEvery membership includes top coaching, 25+ classes per week to choose from, and a community that makes showing up the easy part.\n\nWe offer a range of membership options depending on how often you would like to train.",
+        "price_line": "Memberships start from as little as £65.92.",
+        "tall": true,
+        "links": [
+          { "label": "Membership prices", "url": "/memberships" },
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20memberships." }
+        ]
+      },
+      {
+        "title": "Kids",
+        "label": "",
+        "photo": "/assets/r6-14.jpg",
+        "photo_description": "Children high-fiving a coach at a CrossFit Kids class",
+        "position": "50% 45%",
+        "text": "Our kids programme at CrossFit Warrington focuses on building physical literacy first. Without the pressure of heavy competition, we help kids move well, build body confidence, and genuinely enjoy being active.\n\nWith small class sizes and expert coaching, your child gets the personal attention they need to build healthy habits and learn to love movement for life.\n\n**6-week terms throughout the year.**",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Kids%20classes%20and%20dates." }
+        ]
+      },
+      {
+        "title": "Adaptive",
+        "label": "",
+        "photo": "/assets/r6-20.jpg",
+        "photo_description": "A coach supporting a member to walk during an Adaptive CrossFit session",
+        "position": "50% 25%",
+        "text": "**Empowering individuals through movement.**\n\nFitness should be truly inclusive and accessible to everyone, regardless of ability. Our adaptive programme is built on the belief that everyone deserves the opportunity to train, grow, and challenge themselves in a supportive environment.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." }
+        ]
+      },
+      {
+        "title": "RACE Series",
+        "label": "",
+        "photo": "/assets/r6-23.jpg",
+        "photo_description": "Members carrying weights outside the gym during a RACE Series event",
+        "position": "50% 45%",
+        "text": "Test your limits with our RACE Series (Resilience & Conditioning Events). Built around high-intensity functional fitness challenges, these year-round events are designed to break through mental and physical barriers and keep your momentum going.\n\n**RACE as an individual, pair or team. Non-members welcome.**",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Book here", "url": "https://www.wodboard.com/locations/620/workshops/bfa9cff5c7" },
+          { "label": "WhatsApp us for dates", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20RACE%20Series%20dates." }
+        ]
+      },
+      {
+        "title": "Nutrition Coaching",
+        "label": "",
+        "photo": "/assets/r8-nutrition.jpg",
+        "photo_description": "Two members laughing between exercises at CrossFit Warrington",
+        "position": "50% 15%",
+        "text": "Training is only half the battle. To truly see and feel results, your nutrition needs to match your life. At CrossFit Warrington, we keep it simple and flexible:\n\n**The 8-Week Group Reset:** Team up with the community for our seasonal challenges. Build real, sustainable habits together in a high-energy, supportive group environment.\n\n**3-Month 1-to-1 Coaching:** Get deep, personalised guidance built around your exact body, schedule, and goals with a dedicated coach in your corner.\n\nWhether you love the team accountability of a group reset or a completely custom 1-to-1 blueprint, we're here to help you thrive inside and outside the gym.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Nutrition%20Coaching." }
+        ]
+      },
+      {
+        "title": "Personal Training",
+        "label": "",
+        "photo": "/assets/r8-pt.jpg",
+        "photo_description": "A coach demonstrating a stretch to a member in a personal training session",
+        "position": "50% 0%",
+        "text": "Bespoke programmes built around your body, your goals and your lifestyle. Led by head coach Sian and our expert team, from athletic performance to post-injury recovery and neurological rehabilitation.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Personal%20Training." }
+        ]
+      },
+      {
+        "title": "Online Coaching",
+        "label": "",
+        "photo": "/assets/r8-online.jpg",
+        "photo_description": "A member checking her form in the mirror during an online coaching session",
+        "position": "",
+        "text": "Remote coaching delivers expert, bespoke training programmes directly to you, allowing you to achieve professional-level results on your own schedule and in your own space. Through continuous digital communication, video analysis, and data-driven adjustments, your coach ensures that every workout is tailored to push you toward your specific goals.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          { "label": "Chat to us on WhatsApp", "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Online%20Coaching." }
+        ]
+      }
+    ]
+  },
+  "drop_in": {
+    "kicker": "Visiting nearby?",
+    "heading": "Drop in.",
+    "text": "In town for work or play? Keep your fitness on track. Experienced CrossFitters can drop into any class and immediately feel like part of the CrossFit Warrington family.",
+    "button": "Book a drop-in",
+    "button_note": "Pick any class on the timetable."
+  },
+  "community": {
+    "photo": "/assets/r6-28.jpg",
+    "photo_description": "Members of the CrossFit Warrington community together in the gym",
+    "heading": "No egos here.",
+    "text": "Welcome to your new fitness home. CrossFit Warrington is a thriving community of everyday people lifting each other up through every tough workout and shared laugh. Whatever your age, background, or current fitness level, you belong here from day one. You don't need to get fit to join us—just take that first step."
+  },
+  "reviews": {
+    "kicker": "From babies to pensioners. Your pace, your class, your community.",
+    "heading": "Our community.",
+    "rating_line": "4.9 from 51 Google reviews",
+    "featured": [
+      { "quote": "I'm doing moves I never thought I could ever do again. Age 62.", "name": "Gill, Google review" },
+      { "quote": "When I walked in I had an expectation of what you see on TV. The reality was entirely different.", "name": "Nick, Google review" },
+      { "quote": "Despite feeling anxious I was made very welcome and quickly felt like I belonged.", "name": "Rhiannon, Google review" }
+    ],
+    "faces": ["/assets/r6-21.jpg", "/assets/r6-32.jpg", "/assets/r6-27.jpg"],
+    "wall": [
+      { "quote": "As someone who started with little to no experience in a gym and was quite anxious about working out, CrossFit Warrington have been amazing in their support and training.", "name": "Georgina, Google review", "photo": "" },
+      { "quote": "Honestly the best decision I ever made was joining CFW. Sian and the team have completely changed my mindset on fitness and life.", "name": "Danielle, Google review", "photo": "" },
+      { "quote": "", "name": "", "photo": "/assets/r6-29.jpg" },
+      { "quote": "It feels like home. Super friendly CrossFit affiliate. Highly qualified coaches.", "name": "Mário, Google review", "photo": "" },
+      { "quote": "I joined CFW in August 2023 following a difficult pregnancy... Sian and the team at CFW have worked so hard in building my strength back up so I can safely carry my child.", "name": "Natalie, Google review", "photo": "" },
+      { "quote": "My tribe. My vibe. This place is more than a place to get fit. It's a family. People who support you, lift you up physically and mentally!!", "name": "Lana, Google review", "photo": "" },
+      { "quote": "", "name": "", "photo": "/assets/r6-08.jpg" },
+      { "quote": "Had a PT session. Sian was incredibly supportive. The gym is inviting and I was instantly put at ease.", "name": "Rachel, Google review", "photo": "" },
+      { "quote": "CrossFit Warrington is a community first before it's a gym, which is what differentiates it from other gyms.", "name": "Charlotte, Google review", "photo": "" },
+      { "quote": "People of all ages and abilities feel comfortable at the gym and the workouts are tailored.", "name": "Amelia, Google review", "photo": "" },
+      { "quote": "", "name": "", "photo": "/assets/r6-36.jpg" },
+      { "quote": "Everyone makes you feel welcome when you first join, can not fault it at all!", "name": "Adam, Google review", "photo": "" },
+      { "quote": "Really welcoming and supportive! Coaches are always able to scale different movements to your ability.", "name": "Emily, Google review", "photo": "" },
+      { "quote": "Very friendly and inclusive! Can't fault it at all!", "name": "Sarah, Google review", "photo": "" },
+      { "quote": "", "name": "", "photo": "/assets/r6-26.jpg" },
+      { "quote": "It's been the best decision I have made in terms of improving my fitness.", "name": "Lisa, Google review", "photo": "" },
+      { "quote": "I started Couch to CrossFit in January — it's the only place I've seen offer such a gentle, supportive intro to CrossFit. After the 5-week course, I was hooked and joined properly. Even though there's a CrossFit gym 2 minutes from me, I choose to travel 20 minutes to CrossFit Warrington.", "name": "Claire, site testimonial", "photo": "" }
+    ]
+  },
+  "coaches_heading": "Meet the coaches.",
+  "day": {
+    "heading": "The day at the gym.",
+    "classes": [
+      { "time": "05:30", "text": "CrossFit Class: Dawn patrol. Monday to Friday.", "link": "" },
+      { "time": "06:30", "text": "CrossFit Class: Pre rush hour. Monday to Friday.", "link": "" },
+      { "time": "09:30", "text": "CrossFit Class: Mid-morning crew. Monday and Friday.", "link": "" },
+      { "time": "10:00", "text": "Adaptive CrossFit. Thursday.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." },
+      { "time": "11:00", "text": "Adaptive CrossFit. Monday.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Adaptive%20classes." },
+      { "time": "13:30", "text": "CrossFit Class: Family. Little legends and lifters. Monday.", "link": "" },
+      { "time": "16:30", "text": "CrossFit Class: Afternoon action. Monday to Friday.", "link": "" },
+      { "time": "18:00", "text": "CrossFit Class: Evening escape. Monday to Friday.", "link": "" },
+      { "time": "19:00", "text": "CrossFit Class: Evening finisher. Monday and Wednesday.", "link": "" }
+    ],
+    "weekend_heading": "Weekend and Bank Holiday",
+    "weekend_classes": [
+      { "time": "08:00", "text": "CrossFit Class: The weekend warriors. Saturday.", "link": "" },
+      { "time": "08:00", "text": "CrossFit Kids. Six-week blocks, Sundays throughout the year.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20the%20Sunday%20Kids%20course%20dates." },
+      { "time": "09:00", "text": "Couch to CrossFit. Six-week courses, Sundays throughout the year.", "link": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20chat%20about%20Couch%20to%20CrossFit." }
+    ],
+    "button": "Book your free trial class",
+    "button_note": "Pick any class. Takes a minute.",
+    "photos": [
+      { "image": "/assets/r6-09.jpg", "position": "50% 25%" },
+      { "image": "/assets/r6-03.jpg", "position": "50% 35%" },
+      { "image": "/assets/r6-34.jpg", "position": "50% 25%" },
+      { "image": "/assets/r6-35.jpg", "position": "50% 40%" },
+      { "image": "/assets/r6-28.jpg", "position": "50% 30%" },
+      { "image": "/assets/r6-27.jpg", "position": "50% 25%" },
+      { "image": "/assets/r6-24.jpg", "position": "50% 40%" },
+      { "image": "/assets/r6-25.jpg", "position": "50% 40%" }
+    ]
+  },
+  "faq_heading": "FAQs.",
+  "close": {
+    "photo": "/assets/r6-26.jpg",
+    "heading": "Your first class is free.",
+    "line": "See you at the gym.",
+    "button": "Book my free class",
+    "button_note": "Takes a minute. Pick any class from 05:30.",
+    "second": "Not ready for a class? Message us for a chat. No sales talk."
+  }
+}

@@ -1,0 +1,68 @@
+{{> head}}
+<body class="page page--{{slug}}">
+{{> bar}}
+<main id="top">
+  <section class="act hub pagehead" data-sc-act="flow">
+    <div class="wrap pagehead__grid{{^page.photo}} pagehead__grid--solo{{/page.photo}}">
+      <div class="pagehead__text" data-sc-in>
+        {{#page.kicker}}<p class="kicker">{{page.kicker}}</p>{{/page.kicker}}
+        <h1>{{page.heading}}</h1>
+        {{#page.intro}}<p class="pagehead__intro">{{page.intro}}</p>{{/page.intro}}
+      </div>
+      {{#page.photo}}<figure class="pagehead__photo" data-sc-in><img src="{{page.photo}}" alt="{{page.photo_description}}" width="1080" height="1350"{{#page.photo_position}} style="object-position: {{page.photo_position}}"{{/page.photo_position}}></figure>{{/page.photo}}
+    </div>
+  </section>
+
+  <section class="act hub pagebody" data-sc-act="flow">
+    <div class="wrap">
+      <div class="prose" data-sc-in>{{{body_html}}}</div>
+
+      {{#is_timetable}}
+      <div class="embed" data-sc-in><iframe src="{{site.timetable_embed}}" title="CrossFit Warrington class timetable, live from WodBoard" loading="lazy"></iframe></div>
+      {{/is_timetable}}
+
+      {{#is_coaches}}
+      <div class="team" data-sc-in data-sc-stagger="40">
+        {{#coaches}}<figure class="coach"><img{{#photo_zoom}} class="zoom"{{/photo_zoom}} src="{{photo}}" alt="{{name}}" width="900" height="900" loading="lazy"{{#photo_focus}} style="transform-origin: {{photo_focus}}"{{/photo_focus}}><figcaption><b>{{name}}</b><small>{{experience}}</small>{{#qualifications}}<small>{{qualifications}}</small>{{/qualifications}}<span>{{bio}}</span></figcaption></figure>
+        {{/coaches}}
+      </div>
+      {{/is_coaches}}
+
+      {{#is_faqs}}
+      <div class="faq__list" data-sc-in>
+        <div class="faq__intro">{{{faqs.intro_html}}}</div>
+        {{#faqs.questions}}<details class="faq__item"><summary>{{question}}</summary>{{{answer_html}}}</details>
+        {{/faqs.questions}}
+        <p class="faq__ask">{{{faqs.ask_html}}}</p>
+      </div>
+      {{/is_faqs}}
+
+      {{#is_location}}
+      <div class="findus" data-sc-in>
+        <div class="map"><iframe src="https://www.google.com/maps?q=CrossFit%20Warrington%2C%2014%20Greys%20Court%2C%20Kingsland%20Grange%2C%20Warrington%20WA1%204SH&amp;output=embed" title="Map showing CrossFit Warrington" loading="lazy"></iframe></div>
+        <form class="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="company" action="/thank-you">
+          <h2>Drop us a line!</h2>
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Leave this empty <input name="company"></label></p>
+          <label>Name <input name="name" autocomplete="name"></label>
+          <label>Email <input name="email" type="email" required autocomplete="email"></label>
+          <label>Message <textarea name="message" rows="5"></textarea></label>
+          <button class="cta" type="submit">Send</button>
+        </form>
+      </div>
+      {{/is_location}}
+
+      {{#is_blog}}
+      <ol class="posts" data-sc-in>
+        {{#posts}}<li class="post-card"><a href="/blog/{{slug}}">{{#photo}}<img src="{{photo}}" alt="" loading="lazy" width="1080" height="1350">{{/photo}}<span class="post-card__meta">{{date_label}}{{#categories.length}} · {{categories_label}}{{/categories.length}}</span><b>{{title}}</b>{{#summary}}<span class="post-card__sum">{{summary}}</span>{{/summary}}</a></li>
+        {{/posts}}
+      </ol>
+      {{/is_blog}}
+    </div>
+  </section>
+
+  {{> pageclose}}
+</main>
+{{> scripts}}
+</body>
+</html>

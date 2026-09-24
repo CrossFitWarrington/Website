@@ -1,0 +1,225 @@
+{{> head}}
+<body class="home">
+
+<span data-sc-progress></span>
+
+{{> bar}}
+
+<!-- the signature's trace: a stroke per review you passed on the wall; it stays -->
+<aside class="tally" id="tally" aria-live="polite" aria-label="Reviews you have passed on the wall" data-sc-verify-state="0">
+  <ol class="tally__marks" aria-hidden="true"></ol>
+  <small>Their words</small>
+</aside>
+
+<main id="top">
+
+  <!-- 1 · Recognition. The picture board and her header. -->
+  <section class="act floor" data-sc-act="pin" data-sc-span="1.6" data-sc-drift="#0A0B0D">
+    <div data-sc-stage>
+      <div class="board" aria-hidden="true">
+        {{#hero.photos}}<img src="{{image}}" alt="" width="1080" height="1350"{{#position}} style="object-position: {{position}}"{{/position}}>{{/hero.photos}}
+      </div>
+      <div class="sc-scrim sc-scrim--lead" aria-hidden="true"></div>
+      <div class="sc-copy sc-copy--lead" data-sc-cue="0 0.9 0">
+        <div class="plate">
+          <p class="kicker">{{hero.kicker}}</p>
+          <h1 data-sc-kinetic="lines">{{hero.heading}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · Tension, then the turn. Three lines, one at a time, over a tightening frame. -->
+  <section class="act turn" data-sc-act="pin" data-sc-span="2.6" data-sc-drift="#0E1013">
+    <div data-sc-stage>
+      <img class="turn__bed" src="{{turn.photo_1}}" alt=""><img class="turn__still turn__still--l" src="{{turn.photo_1}}" alt="" width="1080" height="1350">
+      <div class="turn__fade" data-sc-cue="0.24" data-sc-rise="0" aria-hidden="true"><img class="turn__bed" src="{{turn.photo_2}}" alt=""><img class="turn__still turn__still--r" src="{{turn.photo_2}}" alt="" width="1080" height="1350"></div>
+      <div class="turn__fade" data-sc-cue="0.52" data-sc-rise="0" aria-hidden="true"><img class="turn__bed" src="{{turn.photo_3}}" alt=""><img class="turn__still" src="{{turn.photo_3}}" alt="" width="1080" height="1350"></div>
+      <div class="sc-copy sc-copy--trail" data-sc-cue="0 0.30 0">
+        <div class="plate">
+          <h2>{{turn.heading}}</h2>
+          {{{turn.body_html}}}
+        </div>
+      </div>
+      <div class="sc-copy sc-copy--lead" data-sc-cue="0.24 0.58">
+        <div class="plate">
+          {{{turn.middle_html}}}
+        </div>
+      </div>
+      <div class="sc-copy sc-copy--center" data-sc-cue="0.52 1 0.12 0.06">
+        <div class="plate">
+          <h2 class="big" data-sc-kinetic="lines">{{turn.big}}</h2>
+          <p>{{turn.big_line}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · Join us. Her tiles, her booking links. -->
+  <section class="act hub" id="doors" data-sc-act="flow" data-sc-drift="#0A0B0D">
+    <div class="wrap">
+      <header class="hub__head" data-sc-in><h2>{{join.heading}}</h2></header>
+      <div class="doors" data-sc-in data-sc-stagger="50">
+        <div class="ways"><p class="kicker">{{join.kicker}}</p><h3>{{join.subheading}}</h3><p>{{join.intro}}</p></div>
+        {{#join.tiles}}
+        <div class="door{{#tall}} door--member{{/tall}}"><img src="{{photo}}" alt="{{photo_description}}" width="1080" height="1350" loading="lazy"{{#position}} style="object-position: {{position}}"{{/position}}><div class="door__text">{{#label}}<small>{{label}}</small>{{/label}}<b>{{title}}</b>{{{text_html}}}{{#price_line}}<p class="door__from">{{price_line}}</p>{{/price_line}}<p class="door__links">{{#links}}<a{{#first}} class="go"{{/first}} href="{{url}}">{{label}}</a>{{/links}}</p></div></div>
+        {{/join.tiles}}
+      </div>
+      <aside class="dropin" data-sc-in>
+        <div>
+          <p class="kicker">{{drop_in.kicker}}</p>
+          <h3>{{drop_in.heading}}</h3>
+          <p>{{drop_in.text}}</p>
+        </div>
+        <a class="cta" href="{{site.dropin_url}}">{{drop_in.button}}<small>{{drop_in.button_note}}</small></a>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 4 · Community. The authored silence: one paragraph, one photograph, nothing fires. -->
+  <section class="act hub egos" id="egos" data-sc-act="flow" data-sc-drift="#0C0D10" data-authored-silence="one held read beside one tall photograph">
+    <div class="wrap egos__grid">
+      <figure class="egos__photo"><img src="{{community.photo}}" alt="{{community.photo_description}}" width="1080" height="1350" loading="lazy"></figure>
+      <div class="egos__read" data-sc-in>
+        <h2>{{community.heading}}</h2>
+        <p>{{community.text}}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · The rep wall. Their words, not ours. -->
+  <section class="act wall" id="who" data-sc-act="pan" data-sc-span="3.2" data-sc-drift="#0A0B0D">
+    <div data-sc-stage class="wall__stage">
+      <div class="wall__panel">
+        <p class="kicker">{{reviews.kicker}}</p>
+        <h2>{{reviews.heading}}</h2>
+        <div class="quotes" data-rotate>
+          {{#reviews.featured}}<blockquote{{#first}} class="on"{{/first}}><p>{{quote}}</p><cite>{{name}}</cite></blockquote>
+          {{/reviews.featured}}
+        </div>
+        <p class="proof">{{reviews.rating_line}}</p>
+        <div class="faces" aria-hidden="true">{{#reviews.faces}}<img src="{{.}}" alt="" width="1080" height="1350" loading="lazy">{{/reviews.faces}}</div>
+      </div>
+      <div class="wall__line" aria-hidden="true"></div>
+      <div class="rail" id="rail" data-sc-pan="0">
+        {{#reviews.wall}}
+        {{#quote}}<blockquote class="rep"><p>{{quote}}</p><cite>{{name}}</cite></blockquote>{{/quote}}
+        {{^quote}}{{#photo}}<figure class="rep rep--photo"><img src="{{photo}}" alt="" width="1080" height="1350" loading="lazy"></figure>{{/photo}}{{/quote}}
+        {{/reviews.wall}}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5b · Meet the coaches: a sideways pan. -->
+  <section class="act coaches" id="coaches" data-sc-act="pan" data-sc-span="2.6" data-sc-drift="#0C0D10">
+    <div data-sc-stage class="coaches__stage">
+      <header class="coaches__head"><h2>{{coaches_heading}}</h2></header>
+      <div class="coaches__rail" data-sc-pan="0.06">
+        {{#coaches}}
+        <figure class="coach{{#homepage_text}} coach--lead{{/homepage_text}}"><img{{#photo_zoom}} class="zoom"{{/photo_zoom}} src="{{photo}}" alt="{{name}}" width="900" height="900" loading="lazy"{{#photo_focus}} style="transform-origin: {{photo_focus}}"{{/photo_focus}}><figcaption><b>{{name}}</b><small>{{role}}</small>{{{homepage_html}}}</figcaption></figure>
+        {{/coaches}}
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · The day at the gym -->
+  <section class="act hub day" id="day" data-sc-act="flow" data-sc-drift="#0E1013">
+    <div class="wrap day__grid">
+      <div class="day__list" data-sc-in data-sc-stagger="40">
+        <h2>{{day.heading}}</h2>
+        {{#day.classes}}<a class="slot" href="{{href}}"><b>{{time}}</b><span>{{text}}</span></a>
+        {{/day.classes}}
+        <h3 class="day__sub">{{day.weekend_heading}}</h3>
+        {{#day.weekend_classes}}<a class="slot" href="{{href}}"><b>{{time}}</b><span>{{text}}</span></a>
+        {{/day.weekend_classes}}
+        <a class="cta" href="{{site.free_class_url}}">{{day.button}}<small>{{day.button_note}}</small></a>
+        <a class="second" href="/timetable">See the full timetable, live from WodBoard</a>
+      </div>
+      <figure class="day__photo" id="reel" data-sc-reveal="up" data-sc-reveal-at="0.02 0.4">{{#day.photos}}<img{{#first}} class="on"{{/first}} src="{{image}}" alt="" width="1080" height="1350" loading="lazy"{{#position}} style="object-position: {{position}}"{{/position}}>{{/day.photos}}</figure>
+    </div>
+  </section>
+
+  <!-- 6b · FAQs: her live-site FAQ page. Native details, no script. -->
+  <section class="act hub faq" id="faq" data-sc-act="flow" data-sc-drift="#0C0D10">
+    <div class="wrap faq__grid">
+      <header data-sc-in>
+        <h2>{{faq_heading}}</h2>
+        <p class="faq__ask">{{{faqs.ask_html}}}</p>
+      </header>
+      <div class="faq__list" data-sc-in>
+        <div class="faq__intro">{{{faqs.intro_html}}}</div>
+        {{#faqs.questions}}<details class="faq__item"><summary>{{question}}</summary>{{{answer_html}}}</details>
+        {{/faqs.questions}}
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · Your first class is free. Resolves; holds. -->
+  <section class="act close" id="join" data-sc-act="flow" data-sc-drift="#0A0B0D">
+    <img class="close__bed" src="{{close.photo}}" alt="" loading="lazy"><img class="close__still" src="{{close.photo}}" alt="" width="1080" height="1350" loading="lazy">
+    <div class="close__scrim" aria-hidden="true"></div>
+    <div class="wrap close__inner" data-sc-in data-sc-stagger="70">
+      <h2 class="big">{{close.heading}}</h2>
+      <p>{{close.line}}</p>
+      <a class="cta" href="{{site.free_class_url}}">{{close.button}}<small>{{close.button_note}}</small></a>
+      <a class="second" href="{{whatsapp_url}}">{{close.second}}</a>
+      {{> foot}}
+    </div>
+  </section>
+
+</main>
+
+{{> scripts}}
+<script>
+  (function () {
+    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // The signature move: the rep wall. As each entry's centre passes the strike
+    // line it is struck onto the wall and a stroke is added to the tally.
+    var stage = document.querySelector('.wall__stage');
+    var reps = Array.prototype.slice.call(document.querySelectorAll('#rail .rep'));
+    var tally = document.getElementById('tally');
+    var marks = tally.querySelector('.tally__marks');
+    var struck = 0;
+    function strike(el) {
+      el.classList.add('is-struck');
+      if (el.tagName !== 'BLOCKQUOTE') return;   // photographs light, but only words count
+      struck++;
+      marks.insertBefore(document.createElement('li'), marks.firstChild);
+      tally.setAttribute('data-sc-verify-state', String(struck));
+      document.body.dataset.wall = 'on';
+    }
+    function frame() {
+      var r = stage.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < innerHeight) {
+        var panel = innerWidth > 860 ? document.querySelector('.wall__panel').getBoundingClientRect().width : 0;
+        var line = r.left + panel + (r.width - panel) / 2;
+        for (var i = 0; i < reps.length; i++) {
+          var el = reps[i];
+          if (el.classList.contains('is-struck')) continue;
+          var b = el.getBoundingClientRect();
+          if (b.left + b.width / 2 <= line) strike(el);
+        }
+      }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+
+    // the reviews rotate: six seconds each, paused while the pointer or focus is on them
+    (function () {
+      var box = document.querySelector('.quotes[data-rotate]'); if (!box || reduce) return;
+      var qs = Array.prototype.slice.call(box.children), i = 0, hold = false;
+      box.addEventListener('mouseenter', function () { hold = true; }); box.addEventListener('mouseleave', function () { hold = false; });
+      box.addEventListener('focusin', function () { hold = true; }); box.addEventListener('focusout', function () { hold = false; });
+      setInterval(function () { if (hold) return; qs[i].classList.remove('on'); i = (i + 1) % qs.length; qs[i].classList.add('on'); }, 6000);
+    })();
+
+    // the reel beside the timetable: four seconds a photograph
+    (function () {
+      var ims = Array.prototype.slice.call(document.querySelectorAll('#reel img')), i = 0; if (ims.length < 2 || reduce) return;
+      setInterval(function () { ims[i].classList.remove('on'); i = (i + 1) % ims.length; ims[i].classList.add('on'); }, 4000);
+    })();
+  })();
+</script>
+</body>
+</html>

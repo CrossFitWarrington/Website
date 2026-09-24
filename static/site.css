@@ -1,0 +1,397 @@
+  /* Round five, 15 Sep: the hybrid. A crafted opening (acts 1, 2), then a
+     PFA-style hub (3, 4, 6, 7) with the rep wall as the one pinned peak (5).
+     Tokens are ../_shared/COPY.md verbatim. The logo file is untouched. */
+  :root {
+    --accent:        #1A7BFF;   /* the one blue. Flat. Never a gradient, never a glow. */
+    --accent-ink:    #0A0B0D;
+    --grade:         saturate(.62) contrast(1.06) brightness(.96);   /* cinematic colour, held back */
+    --dim:           grayscale(.85) brightness(.46) contrast(1.02);  /* the quiet state: desaturate first, then dim */
+    --sc-canvas:     #0A0B0D;   /* black, cold */
+    --sc-surface:    #16191D;   /* gunmetal */
+    --iron:          #2C3137;
+    --steel:         #7A828B;
+    --silver:        #C2C8CF;   /* cold silver: marks, labels, rules */
+    --sc-ink:        #F3F5F7;   /* white */
+    --sc-ink-soft:   #AEB4BB;
+    --sc-accent:     var(--accent);   /* the engine's focus ring, caret and selection */
+    --sc-accent-ink: #0A0B0D;
+    /* crossfit.com's type, 17 Sep: PF DIN headings (paid licence, so Barlow Semi Condensed, the free DIN
+       look-alike, stands in; buy PF DIN and swap this one line), Inter body, Roboto Mono captions */
+    --sc-font-display: "Barlow Semi Condensed", "PFDIN", Helvetica, Arial, sans-serif;
+    --sc-font-text:    "Inter", Helvetica, Arial, sans-serif;
+    --font-caption:    "Roboto Mono", ui-monospace, monospace;
+    --ground-rgb: 10,11,13;
+    --grain-rgb: 255,255,255;
+    --grain-a: .028; --grain-b: .035;
+    --light: rgba(194,200,207,.07);
+    --plate-bg: rgba(10,11,13,.9);
+    --plate-line: rgba(0,0,0,.8);
+    --face-plate: #1C2127;
+    --glass: rgba(10,11,13,.6);
+    --cta-bg: var(--accent);
+    --cta-ink: var(--accent-ink);
+    --cta-edge: inset 0 1px 0 rgba(255,255,255,.75), inset 0 -1px 0 rgba(0,0,0,.35), 0 14px 30px -12px rgba(0,0,0,.9);
+    --dot-hi: rgba(255,255,255,.28);
+    --label-halo: rgba(0,0,0,.8);
+    --wire-v: repeating-linear-gradient(90deg, rgba(var(--grain-rgb),var(--grain-a)) 0 1px, transparent 1px 4px);
+    --wire-h: repeating-linear-gradient(180deg, rgba(var(--grain-rgb),var(--grain-b)) 0 1px, transparent 1px 3px);
+    --edge: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 0 rgba(0,0,0,.65);
+    /* page tokens */
+    --gutter: clamp(1.2rem, 4vw, 4rem);
+    --panel: clamp(18rem, 30vw, 26rem);   /* the fixed panel beside the rep wall */
+  }
+  html { background: var(--sc-canvas); }
+  body { color: var(--sc-ink); font-family: var(--sc-font-text); }
+  body::after {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 35;
+    background: var(--wire-v), radial-gradient(120% 90% at 0% 0%, var(--light), transparent 60%);
+  }
+  img { filter: var(--grade); }
+  .mark img, .foot img { filter: none; }   /* the logo is not a photograph */
+
+  /* ---- Type ------------------------------------------------------------- */
+  h1, h2, h3 { font-family: var(--sc-font-display); font-weight: 800; line-height: 1.02; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+  h1 { font-size: clamp(1.9rem, 4.4vw, 3.8rem); }
+  h2 { font-size: clamp(1.6rem, 3.4vw, 3rem); }
+  h2.big { font-size: clamp(2.2rem, 5.6vw, 4.8rem); font-weight: 800; }
+  .hub h2 { font-size: clamp(2.3rem, 5.8vw, 4.8rem); font-weight: 800; }   /* the hub is editorial: huge headings, real photographs */
+  .kicker { font: 700 .72rem/1.2 var(--font-caption); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 0 0 .9rem; }
+  p { text-wrap: pretty; }
+  .soft { color: var(--sc-ink-soft); }
+
+  /* ---- Chrome: a sparse fixed bar. Mark, three links, the priced CTA. ---- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 40; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: clamp(.6rem, 1.2vw, .9rem) clamp(.9rem, 2vw, 1.4rem); background: var(--sc-canvas); border-bottom: 2px solid var(--accent); }   /* Sian, 21 Sep: tabs and logo on a banner */
+  .mark { width: clamp(11rem, 17vw, 16rem); display: block; }
+  .mark img { width: 100%; display: block; }
+  .topcta {
+    justify-self: end; color: var(--sc-ink); text-decoration: none; font: 700 .85rem/1.3 var(--sc-font-display); letter-spacing: .03em; white-space: nowrap;
+    padding: .55rem .8rem; border: 1px solid var(--iron); background: var(--sc-surface); box-shadow: var(--edge);
+  }
+  .topcta em { font-style: normal; color: var(--accent); }
+  .topcta:hover, .topcta:focus-visible { border-color: var(--silver); outline: none; }
+  @media (max-width: 720px) { .topcta { font-size: .62rem; padding: .45rem .6rem; } }
+
+  /* ---- The tally: the proof that follows you down the page ------------- */
+  /* Hidden until the first review strikes the wall; from then on it stands at
+     the right edge through the day and the CTA. Strokes, not a digit. */
+  .tally { position: fixed; right: clamp(.9rem, 2vw, 1.4rem); top: 50%; translate: 0 -50%; z-index: 40; display: grid; justify-items: end; gap: .5rem; opacity: 0; transform: translateX(.6rem); transition: opacity 500ms, transform 500ms var(--sc-ease-out); pointer-events: none; }
+  body[data-wall="on"] .tally { opacity: 1; transform: none; }
+  .tally small { font: 700 .58rem/1 var(--font-caption); letter-spacing: .12em; text-transform: uppercase; color: var(--silver); text-shadow: 0 1px 2px var(--label-halo); writing-mode: vertical-rl; transform: rotate(180deg); }
+  .tally__marks { display: grid; grid-auto-flow: column; gap: 3px; margin: 0; padding: 0; list-style: none; direction: rtl; }
+  .tally__marks li { width: 2px; height: 1.1rem; background: var(--silver); box-shadow: 0 1px 2px var(--label-halo); animation: strike 260ms var(--sc-ease-out); }
+  .tally__marks li:nth-child(5n) { transform: rotate(-24deg) translateY(-1px); height: 1.35rem; }   /* the gate stroke across a five */
+  .tally__marks li:first-child { background: var(--accent); }   /* the latest stroke is the one blue; rtl, so first is newest */
+  @keyframes strike { from { transform: scaleY(0); transform-origin: top; } }
+  @media (max-width: 720px) { .tally { top: auto; bottom: 1rem; translate: none; right: 1rem; } .tally small { display: none; } .tally__marks li { height: .8rem; } }
+
+  /* ---- Copy plates over the cinema (acts 1, 2) ------------------------- */
+  .sc-copy[data-sc-cue] { background: var(--plate-bg); }
+  .plate {
+    padding: clamp(1.1rem, 2.6vw, 2rem) clamp(1.2rem, 3vw, 2.4rem);
+    background-image: var(--wire-h);
+    border-left: 1px solid var(--silver);
+    box-shadow: var(--edge), inset 1px 0 0 var(--plate-line);
+  }
+  .sc-copy--trail .plate { border-left: 0; border-right: 1px solid var(--silver); box-shadow: var(--edge), inset -1px 0 0 var(--plate-line); }
+  .sc-copy--center .plate { border: 0; border-top: 1px solid var(--silver); box-shadow: inset 0 1px 0 var(--plate-line), inset 0 -1px 0 var(--plate-line); }
+  .sc-copy--center { width: min(92vw, 56rem); max-width: none; }
+  .plate p { font-size: clamp(1rem, 1.3vw, 1.2rem); line-height: 1.5; color: var(--sc-ink); margin: 1rem 0 0; max-width: 34em; }
+  .sc-copy--center .plate p { margin-inline: auto; }   /* the 34em box was hugging the left of a centred plate */
+  .plate p.soft { color: var(--sc-ink-soft); }
+  .plate p.kicker { color: var(--accent); }   /* outranks .plate p; Sian: the name in blue */
+  @media (max-width: 860px) { .sc-copy--center { width: auto; translate: 0 -50%; } }
+  @media (max-width: 720px) {
+    .sc-copy--lead, .sc-copy--trail { left: 1rem; right: 1rem; bottom: 8vh; max-width: none; }
+    .sc-copy--trail { text-align: left; }
+    .sc-copy--trail .plate { border-right: 0; border-left: 1px solid var(--silver); box-shadow: var(--edge), inset 1px 0 0 var(--plate-line); }
+    .sc-copy--center { left: 1rem; right: 1rem; translate: 0 -50%; }
+  }
+
+  /* ---- Act 1: the picture board (Sian, 17 Sep: "have we lost the picture board?") */
+  /* Eight of her new photographs, 4 x 2 (2 x 4 on a phone), easing in as the
+     pin runs; the headline plate sits over the left side. */
+  .board { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 3px; background: var(--sc-canvas); transform: scale(calc(1.06 - var(--sc-p, 0) * .06)); }
+  .board img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; min-height: 0; }
+  @media (max-width: 720px) { .board { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); } }
+  @media (prefers-reduced-motion: reduce) { .board { transform: none; } }
+  .floor .kicker { font: 800 clamp(1.1rem, 1.8vw, 1.6rem)/1 var(--sc-font-display); letter-spacing: .02em; text-transform: none; }   /* Sian: "CrossFit Warrington in blue" */
+
+  /* ---- Act 2: the turn. Three lines, one at a time, over a tightening frame */
+  /* Round eight, 24 Sep: her photos are 1080 x 1350 portraits; stretched across a landscape screen they
+     went soft and pixelated. Now a blurred, darkened wash of the same photo fills the frame and the photo
+     itself sits sharp at its own shape in the middle, below the banner, so no head is cut. */
+  .turn__bed { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1.15 + var(--sc-p, 0) * .05)); filter: var(--grade) blur(28px) brightness(calc(.5 - var(--sc-p, 0) * .2)); }
+  .turn__still { position: absolute; top: 4.6rem; bottom: 0; left: 50%; height: calc(100% - 4.6rem); width: auto; max-width: none; aspect-ratio: 4 / 5; translate: -50% 0; object-fit: cover; transform: scale(calc(1 + var(--sc-p, 0) * .04)); transform-origin: 50% 0; filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); box-shadow: 0 0 90px 30px rgba(0,0,0,.55); }
+  @media (min-aspect-ratio: 1 / 1) { .turn__still--l { left: 6vw; translate: none; } .turn__still--r { left: auto; right: 6vw; translate: none; } }   /* the photo stands away from its copy plate */
+  @media (max-aspect-ratio: 4 / 5) { .turn__still { left: 0; width: 100%; translate: none; } }
+  .turn__fade { position: absolute; inset: 0; }   /* one photograph per line: the cue fades the wrapper, the bed keeps its own scale */
+  @media (prefers-reduced-motion: reduce) { .turn__bed { transform: scale(1.15); } .turn__still { transform: none; } }
+  .turn .sc-copy--trail { top: 50%; bottom: auto; translate: 0 -50%; }
+  .turn .sc-copy--lead { top: 50%; bottom: auto; translate: 0 -50%; }
+  @media (min-width: 861px) { .turn .sc-copy--center { top: auto; bottom: 5vh; translate: -50% 0; } }   /* sits low, so the two faces above it stay in view */
+  @media (max-width: 720px) { .turn .sc-copy--trail, .turn .sc-copy--lead { top: auto; bottom: 8vh; translate: none; } }
+
+  /* ---- The hub: ordinary sections, done well ---------------------------- */
+  .wrap { width: 100%; max-width: 84rem; margin-inline: auto; padding-inline: var(--gutter); }
+  .hub { padding-block: clamp(4rem, 10vw, 8rem); position: relative; }
+  .hub__head { margin-bottom: clamp(1.6rem, 4vw, 3rem); }
+  
+  /* Act 3: Join us. Nine tiles, 3 x 3: Foundations 1:1 / Foundations group / Experienced; Kids / Adaptive / RACE; Nutrition / PT / Online. Each has its own booking link from her site. */
+  .doors { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(.6rem, 1.2vw, 1rem); align-items: start; }
+  .door { grid-column: span 4; display: block; position: relative; background: var(--sc-surface); background-image: var(--wire-h); color: var(--sc-ink); text-decoration: none; border: 1px solid var(--iron); box-shadow: var(--edge); transition: border-color 160ms, transform 160ms var(--sc-ease-out); }
+  .door img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 30%; }   /* her photos are 4:5; 4/3 was taking heads off */
+  .door__text { padding: 1rem 1.1rem 1.2rem; }
+  .door small { display: block; font: 700 .64rem/1.2 var(--font-caption); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .5rem; }
+  .door b { display: block; font: 800 clamp(1.25rem, 1.7vw, 1.55rem)/1.1 var(--sc-font-display); margin-bottom: .45rem; color: var(--accent); }   /* Sian: titles in blue */
+  .dropin { margin-top: clamp(1.6rem, 4vw, 2.6rem); display: grid; grid-template-columns: 1fr auto; gap: clamp(1.2rem, 3vw, 3rem); align-items: center; padding: clamp(1.2rem, 2.6vw, 2rem); background: var(--sc-surface); background-image: var(--wire-h); border: 1px solid var(--iron); box-shadow: var(--edge); }
+  .dropin h3 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); color: var(--accent); }
+  .dropin p { margin: .6rem 0 0; color: var(--sc-ink-soft); max-width: 46em; line-height: 1.5; }
+  .dropin .kicker { margin: 0 0 .4rem; }
+  .dropin .cta { margin-top: 0; }
+  @media (max-width: 860px) { .dropin { grid-template-columns: 1fr; } }
+  .door__from { margin: .9rem 0 0; font: 700 1rem/1.3 var(--sc-font-display); color: var(--sc-ink); }
+  .door__links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: .9rem; }
+  .door__links a { font: 700 .74rem/1.3 var(--font-caption); color: var(--sc-ink); text-decoration: underline; text-underline-offset: .25em; text-decoration-color: var(--steel); position: relative; z-index: 1; }
+  .door__links a.go { position: static; }
+  .door__links a.go::after { content: ""; position: absolute; inset: 0; }   /* the whole card is the first link */
+  .door__links a:hover, .door__links a:focus-visible { text-decoration-color: var(--accent); outline: none; }
+  .door__text > span { display: block; font-size: .9rem; line-height: 1.5; color: var(--sc-ink-soft); }
+  .door__text > span + span { margin-top: .6rem; }
+  .door__text strong { color: var(--sc-ink); }
+  /* Sian, 24 Sep: "How to join" in blue text, not a blue block; membership stands beside the two Foundations tiles */
+  .ways { grid-column: 1 / 9; grid-row: 1; padding: 0 0 clamp(.4rem, 1vw, .8rem); color: var(--sc-ink); }
+  .ways .kicker { margin: 0 0 .5rem; }
+  .ways h3 { font-size: clamp(1.5rem, 2.6vw, 2.3rem); color: var(--accent); }
+  .ways p:last-child { margin: .6rem 0 0; max-width: 46em; line-height: 1.5; color: var(--sc-ink-soft); }
+  .door--member { grid-column: 9 / 13; grid-row: 1 / 3; }
+  @media (max-width: 1000px) { .ways { grid-column: 1 / -1; grid-row: auto; } .door--member { grid-column: span 6; grid-row: auto; } }
+  @media (max-width: 720px) { .door--member { grid-column: span 12; } }
+  @media (hover: hover) and (pointer: fine) { .door:hover { border-color: var(--accent); transform: translateY(-2px); } }
+  .door:focus-within { border-color: var(--accent); }
+  @media (max-width: 1000px) { .door { grid-column: span 6; } }
+  @media (max-width: 720px) { .door { grid-column: span 12; } .door img { aspect-ratio: 5 / 4; } }
+
+  /* Act 4: the authored silence. One paragraph, held, beside one tall photograph. */
+  .egos__grid { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(1.6rem, 5vw, 5rem); align-items: start; }
+  .egos__photo { margin: 0; }
+  .egos__photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  .egos__read { position: sticky; top: 24vh; }
+  .egos__read p { font-size: clamp(1.1rem, 1.6vw, 1.45rem); line-height: 1.55; margin: 1.4rem 0 0; max-width: 32em; }
+  @media (max-width: 860px) { .egos__grid { grid-template-columns: 1fr; } .egos__read { position: static; } .egos__photo img { aspect-ratio: 4 / 5; } }
+
+  /* Act 5: the rep wall. The peak. A fixed panel of the three she saw, and a
+     wall of the rest that strikes as you pass. */
+  .wall__stage { background: var(--sc-canvas); }
+  .wall__panel { position: absolute; left: 0; top: 0; bottom: 0; width: var(--panel); z-index: 3; display: grid; align-content: center; padding: 5rem var(--gutter) 2rem; background: var(--sc-canvas); background-image: var(--wire-h); border-right: 1px solid var(--iron); box-shadow: var(--edge); }
+  .wall__panel h2 { font-size: clamp(1.5rem, 2.4vw, 2.3rem); }
+  .quotes { display: grid; gap: 1rem; margin-top: 1.2rem; }
+  .quotes blockquote { margin: 0; padding-left: 1rem; border-left: 2px solid var(--silver); }
+  .quotes[data-rotate] blockquote { display: none; }
+  .quotes[data-rotate] blockquote.on { display: block; }
+  .faces { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 1.2rem; }
+  .faces img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 25%; box-shadow: var(--edge); }
+  @media (max-width: 860px) { .faces { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .quotes[data-rotate] blockquote { display: block; } }
+  .quotes blockquote p { margin: 0; font-size: clamp(.98rem, 1.2vw, 1.12rem); line-height: 1.5; }
+  .quotes cite, .rep cite { display: block; margin-top: .45rem; font-style: normal; font: 700 .7rem/1 var(--font-caption); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }   /* Sian, 17 Sep: names in blue */
+  .proof { margin: 1.2rem 0 0; font: 700 .78rem/1.4 var(--font-caption); color: var(--sc-ink-soft); letter-spacing: .02em; }
+  .wall__line { position: absolute; top: 0; bottom: 0; left: calc(var(--panel) + (100% - var(--panel)) / 2); width: 1px; background: linear-gradient(180deg, transparent, var(--iron) 20%, var(--iron) 80%, transparent); z-index: 2; pointer-events: none; }
+  .rail { position: absolute; top: 0; bottom: 0; display: grid; grid-auto-flow: column; grid-template-rows: 1fr 1fr; grid-auto-columns: max-content; align-content: center; align-items: center; gap: clamp(.8rem, 1.6vw, 1.4rem); width: max-content; padding: 5rem calc((100vw - var(--panel)) / 2) 3rem calc(var(--panel) + clamp(2rem, 6vw, 6rem)); }   /* right pad = strike line to edge, so the last review can reach the line */
+  .rep { margin: 0; width: clamp(15rem, 20vw, 19rem); color: var(--steel); transition: color 600ms var(--sc-ease-out); position: relative; padding-top: .9rem; }
+  .rep::before { content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 1px; background: var(--silver); transform: scaleX(0); transform-origin: left; transition: transform 520ms var(--sc-ease-out); }   /* the strike */
+  .rep p { margin: 0; font: 700 clamp(1rem, 1.35vw, 1.3rem)/1.35 var(--sc-font-display); letter-spacing: -.005em; }
+  .rep.is-struck { color: var(--sc-ink); }
+  .rep.is-struck::before { transform: scaleX(1); }
+  .rep.is-struck cite { color: var(--accent); }
+  .rep cite { color: var(--steel); transition: color 600ms; }
+  .rep--photo { width: clamp(11rem, 15vw, 14rem); padding-top: 0; }
+  .rep--photo::before { display: none; }
+  .rep--photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 20%; filter: var(--dim); transition: filter 900ms var(--sc-ease-out); box-shadow: var(--edge); }
+  .rep--photo.is-struck img { filter: var(--grade); box-shadow: var(--edge), inset 0 0 0 1px rgba(26,123,255,.5); }
+  @media (max-width: 860px) {
+    :root { --panel: 0px; }
+    .wall__panel { width: auto; right: 0; bottom: auto; height: 44vh; padding: 4.6rem var(--gutter) 1rem; border-right: 0; border-bottom: 1px solid var(--iron); overflow: hidden; }
+    .wall__panel h2 { font-size: 1.4rem; }
+    .quotes blockquote p { font-size: .95rem; }
+    .rail { padding: 47vh 50vw 1rem 1.2rem; grid-template-rows: 1fr; align-content: end; }
+    .rep { width: 15rem; }
+    .rep--photo { width: 9rem; }
+    .rep--photo img { aspect-ratio: 4 / 5; }
+    .wall__line { left: 50%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rep, .rep::before, .rep cite, .rep--photo img { transition: none; } }
+
+  /* Act 5b: the coaches. Twelve cards, her site's black-ground portraits. Names in blue (Ash). */
+  /* Ash, 17 Sep 12:04: a sideways pan like the community wall, not a grid. */
+  .coaches__stage { background: var(--sc-canvas); }
+  .coaches__head { position: absolute; left: var(--gutter); top: clamp(5rem, 12vh, 7rem); z-index: 2; }
+  .coaches__head h2 { font-size: clamp(2.3rem, 5.8vw, 4.8rem); font-weight: 800; }
+  .coaches__rail { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; gap: clamp(.8rem, 1.6vw, 1.4rem); width: max-content; padding: clamp(11rem, 26vh, 15rem) clamp(2rem, 6vw, 6rem) 3rem var(--gutter); }
+  .coach { width: clamp(15rem, 20vw, 19rem); flex: none; margin: 0; background: var(--sc-surface); background-image: var(--wire-h); border: 1px solid var(--iron); box-shadow: var(--edge); }
+  .coach img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; }
+  .coach figcaption { padding: .9rem 1rem 1.1rem; }
+  .coach--lead { width: clamp(34rem, 48vw, 44rem); display: grid; grid-template-columns: 5fr 7fr; align-items: stretch; }   /* Sian's card carries her full bio, photo beside it */
+  .coach { overflow: hidden; } .coach figcaption { position: relative; z-index: 1; background: var(--sc-surface); background-image: var(--wire-h); }
+  .coach--lead img { height: 100%; aspect-ratio: auto; }
+  .coach img.zoom { transform: scale(1.9); }   /* two full-length shots brought up to the same head size as the rest */
+  .coach b { display: block; font: 800 clamp(1.1rem, 1.4vw, 1.3rem)/1.1 var(--sc-font-display); color: var(--accent); }
+  .coach small { display: block; margin-top: .3rem; font: 700 .62rem/1.3 var(--font-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--silver); }
+  .coach span { display: block; margin-top: .45rem; font-size: .85rem; line-height: 1.45; color: var(--sc-ink-soft); }
+  @media (max-width: 720px) { .coaches__head { top: 4.6rem; } .coaches__rail { padding-top: 9rem; padding-left: 1.2rem; } .coach { width: 13rem; } .coach--lead { width: 20rem; display: block; } .coach--lead img { height: auto; aspect-ratio: 16 / 10; } .coach--lead span { font-size: .8rem; line-height: 1.4; } .coach figcaption { padding: .7rem .75rem .9rem; } }
+
+  /* Act 6: the day at the gym. Nine real slots, read down like a timetable. */
+  .day__grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.6rem, 5vw, 5rem); align-items: start; }
+  .day__list h2 { margin-bottom: clamp(1.2rem, 3vw, 2rem); }
+  .slot { display: grid; grid-template-columns: 5.6rem 1fr; align-items: center; gap: 1rem; padding: .7rem 0; border-top: 1px solid var(--iron); color: var(--sc-ink); text-decoration: none; transition: background 140ms; }
+  .slot:last-of-type { border-bottom: 1px solid var(--iron); }
+  .slot b { font: 700 clamp(1.1rem, 1.6vw, 1.5rem)/1 var(--sc-font-display); font-variant-numeric: tabular-nums; color: var(--sc-ink); }
+  .slot span { font-size: .95rem; line-height: 1.4; color: var(--sc-ink-soft); }
+  @media (hover: hover) and (pointer: fine) { .slot:hover b { color: var(--accent); } }
+  .slot:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .day__sub { margin: 1.6rem 0 .6rem; font: 700 .72rem/1.2 var(--font-caption); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+  .day__list .soft { margin: 1rem 0 0; font-size: .95rem; }
+  .day__list .cta { margin-top: 1.4rem; }
+  .day__photo { margin: 0; position: sticky; top: 14vh; display: grid; }   /* a rolling reel (Sian, 21 Sep): eight stacked, one lit */
+  .day__photo img { grid-area: 1 / 1; opacity: 0; transition: opacity 900ms; }
+  .day__photo img.on { opacity: 1; }
+  .day__photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; }
+  @media (max-width: 860px) { .day__grid { grid-template-columns: 1fr; } .day__photo { position: static; } .day__photo img { aspect-ratio: 16 / 10; } .slot { grid-template-columns: 4.4rem 1fr; } }
+
+  /* Act 7: your first class is free. A quiet frame on the same floor the page
+     opened on, now with the tally standing beside it. Resolves; holds. */
+  .close { min-height: 100vh; display: grid; align-items: center; position: relative; overflow: hidden; }
+  .close__bed { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: var(--dim) blur(24px); transform: scale(1.15); z-index: 0; }
+  .close__still { position: absolute; z-index: 2; right: clamp(2rem, 6vw, 6rem); top: 50vh; translate: 0 -50%; height: min(78vh, 46rem); width: auto; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: var(--edge), 0 30px 80px -20px rgba(0,0,0,.9); }
+  @media (min-width: 1001px) { .close__inner { padding-right: calc(min(78vh, 46rem) * .8 + clamp(3rem, 8vw, 8rem)); } }
+  @media (max-width: 1000px) { .close__still { display: none; } }
+  .close__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(var(--ground-rgb),.94) 0, rgba(var(--ground-rgb),.86) 45%, rgba(var(--ground-rgb),.4) 75%, rgba(var(--ground-rgb),.2) 100%); }
+  .close__inner { position: relative; z-index: 2; padding-block: clamp(5rem, 12vh, 8rem); }
+  .close__inner > p { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 1rem 0 0; }
+  .cta {
+    display: inline-block; margin-top: 1.6rem;
+    background: var(--cta-bg); background-image: var(--wire-h), var(--cta-bg);
+    color: var(--cta-ink); font: 800 1.15rem/1 var(--sc-font-display); letter-spacing: .02em;
+    padding: 1.05rem 1.4rem; text-decoration: none; box-shadow: var(--cta-edge);
+    transition: transform 160ms var(--sc-ease-out), filter 160ms;
+  }
+  .cta:hover, .cta:focus-visible { transform: translateY(-2px); filter: brightness(1.08); outline: 2px solid var(--sc-ink); outline-offset: 3px; }
+  .cta:active { transform: translateY(1px); }
+  .cta small { display: block; font: 400 .8rem/1.3 var(--sc-font-text); margin-top: .35rem; opacity: .8; }
+  .second { display: block; width: fit-content; margin: 1.2rem 0 0; color: var(--sc-ink); text-decoration: underline; text-underline-offset: .25em; text-decoration-color: var(--steel); font-size: 1rem; }
+  .second:focus-visible { outline: 2px solid var(--silver); outline-offset: 3px; }
+  .foot { margin-top: clamp(2rem, 6vh, 3.5rem); padding-top: 1rem; border-top: 1px solid var(--iron); font-size: .82rem; line-height: 1.6; color: var(--sc-ink-soft); max-width: 46rem; }
+  .foot a { color: var(--sc-ink-soft); }
+  .foot .lockup { width: 9rem; margin-bottom: .6rem; display: block; }
+
+  /* FAQs + the privacy page: her words, native details */
+  .faq__grid { display: grid; grid-template-columns: 4fr 8fr; gap: clamp(1.6rem, 5vw, 5rem); align-items: start; }
+  .faq__ask { margin: 1.2rem 0 0; color: var(--sc-ink-soft); line-height: 1.5; }
+  .faq__ask a, .legal a { color: var(--sc-ink); }
+  .faq__intro p { margin: 0 0 1rem; line-height: 1.6; color: var(--sc-ink-soft); }
+  .faq__item { border-top: 1px solid var(--iron); }
+  .faq__item:last-child { border-bottom: 1px solid var(--iron); }
+  .faq__item summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 1rem; padding: 1rem 0; font: 700 clamp(1.1rem, 1.6vw, 1.35rem)/1.2 var(--sc-font-display); color: var(--sc-ink); }
+  .faq__item summary::-webkit-details-marker { display: none; }
+  .faq__item summary::after { content: "+"; color: var(--accent); font-family: var(--font-caption); }
+  .faq__item[open] summary::after { content: "–"; }
+  .faq__item summary:hover, .faq__item summary:focus-visible { color: var(--accent); outline: none; }
+  .faq__item p { margin: 0 0 1rem; max-width: 60ch; line-height: 1.6; color: var(--sc-ink-soft); }
+  @media (max-width: 860px) { .faq__grid { grid-template-columns: 1fr; } }
+  .legal { margin-top: 1rem; }
+  .legal li { margin-bottom: .25rem; }
+  .foot__claim { color: var(--sc-ink); }
+  .foot a.foot__dir { color: var(--accent); font-weight: 700; }
+  .legal summary { cursor: pointer; width: fit-content; color: var(--sc-ink); text-decoration: underline; text-underline-offset: .25em; text-decoration-color: var(--steel); }
+  .legal summary:focus-visible { outline: 2px solid var(--silver); outline-offset: 3px; }
+  .legal h4 { margin: 1.6rem 0 .4rem; font: 800 1.2rem/1.1 var(--sc-font-display); color: var(--accent); }
+  .legal h5 { margin: 1rem 0 .3rem; font: 700 .95rem/1.2 var(--sc-font-text); color: var(--sc-ink); }
+  .legal p { margin: 0 0 .5rem; }
+  .legal ul { margin: 0 0 .6rem; padding-left: 1.2rem; }
+
+  @media (prefers-reduced-motion: reduce) { .door, .cta, .tally, .tally__marks li { transition: none; animation: none; } }
+
+  /* ---- Go-live, 24 Sep: the whole-site menu, inner pages, the blog ------ */
+  .nav { display: flex; justify-content: center; align-items: center; gap: clamp(.9rem, 2vw, 2rem); }
+  .nav__top { font: 700 .88rem/1 var(--font-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--sc-ink); text-decoration: none; padding: .5rem 0; background: none; border: 0; border-bottom: 2px solid transparent; cursor: pointer; }
+  .nav__top:hover, .nav__top:focus-visible, .nav__group.open > .nav__top { color: var(--accent); outline: none; }
+  button.nav__top::after { content: " +"; color: var(--accent); }
+  .nav__group.open > button.nav__top::after { content: " –"; }
+  .nav__group { position: relative; }
+  .nav__menu { display: none; position: absolute; left: -1rem; top: calc(100% + .7rem); min-width: 15rem; margin: 0; padding: .5rem 0; list-style: none; background: var(--sc-surface); border: 1px solid var(--iron); border-top: 2px solid var(--accent); box-shadow: var(--edge), 0 20px 40px -12px rgba(0,0,0,.9); }
+  .nav__group.open .nav__menu { display: block; }
+  @media (hover: hover) and (pointer: fine) { .nav__group:hover .nav__menu { display: block; } .nav__group::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: .8rem; } }
+  .nav__menu a { display: block; padding: .6rem 1rem; color: var(--sc-ink); text-decoration: none; font-size: .95rem; }
+  .nav__menu a:hover, .nav__menu a:focus-visible { color: var(--accent); background: rgba(255,255,255,.03); outline: none; }
+  .menu-btn { display: none; justify-self: end; font: 700 .8rem/1 var(--font-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--sc-ink); background: none; border: 1px solid var(--iron); padding: .6rem .8rem; cursor: pointer; }
+  .menu-btn:focus-visible { outline: 2px solid var(--accent); }
+  @media (max-width: 1060px) {
+    .bar { grid-template-columns: auto 1fr auto auto; gap: .6rem; }
+    .menu-btn { display: block; order: 3; }
+    .topcta { order: 2; }
+    .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; height: calc(100dvh - 100%); overflow-y: auto; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; padding: 1rem var(--gutter) 3rem; background: var(--sc-canvas); border-top: 1px solid var(--iron); }
+    body.nav-open .nav { display: flex; }
+    body.nav-open { overflow: hidden; }
+    .nav__top { display: block; width: 100%; text-align: left; padding: 1rem 0; font-size: 1rem; border-bottom: 1px solid var(--iron); }
+    .nav__menu { display: block; position: static; min-width: 0; padding: .2rem 0 .8rem; background: none; border: 0; box-shadow: none; }
+    .nav__menu a { padding: .55rem 0 .55rem 1rem; }
+    button.nav__top::after { content: ""; }
+    .nav__group:hover .nav__menu { display: block; }
+  }
+  @media (max-width: 720px) { .menu-btn { padding: .45rem .6rem; font-size: .68rem; } }
+  @media (max-width: 420px) { .mark { width: 8.6rem; } .bar { gap: .4rem; } }
+
+  /* Inner pages: a head with one photograph, her words, then the close */
+  .pagehead { padding-top: calc(clamp(4rem, 8vw, 6rem) + 4.6rem); padding-bottom: clamp(2rem, 5vw, 4rem); }
+  .pagehead__grid { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.6rem, 5vw, 5rem); align-items: center; }
+  .pagehead__grid--solo { grid-template-columns: 1fr; }
+  .pagehead h1 { font-size: clamp(2.3rem, 5.4vw, 4.6rem); }
+  .pagehead .kicker a { color: inherit; }
+  .pagehead__intro { font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.5; color: var(--sc-ink-soft); margin: 1.2rem 0 0; max-width: 34em; }
+  .pagehead__photo { margin: 0; }
+  .pagehead__photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; max-height: 70vh; }
+  @media (max-width: 860px) { .pagehead__grid { grid-template-columns: 1fr; } .pagehead__photo img { aspect-ratio: 16 / 10; } }
+  .pagebody { padding-top: 0; }
+  .prose { max-width: 46rem; font-size: 1.08rem; line-height: 1.65; }
+  .prose > :first-child { margin-top: 0; }
+  .prose h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); margin: 2.6rem 0 .8rem; }
+  .prose h3 { font-size: clamp(1.3rem, 2.2vw, 1.8rem); margin: 2rem 0 .6rem; color: var(--accent); }
+  .prose h4 { font: 700 1.1rem/1.3 var(--sc-font-text); margin: 1.6rem 0 .4rem; }
+  .prose p, .prose ul, .prose ol { margin: 0 0 1.1rem; color: var(--sc-ink-soft); }
+  .prose strong { color: var(--sc-ink); }
+  .prose li { margin-bottom: .4rem; }
+  .prose a:not(.cta) { color: var(--sc-ink); text-decoration-color: var(--accent); text-underline-offset: .2em; }
+  .prose img { display: block; width: 100%; height: auto; margin: 1.6rem 0; }
+  .prose blockquote { margin: 1.6rem 0; padding-left: 1.2rem; border-left: 2px solid var(--accent); font: 700 clamp(1.15rem, 1.6vw, 1.4rem)/1.4 var(--sc-font-display); color: var(--sc-ink); }
+  .prose blockquote p { color: inherit; }
+  .prose hr { border: 0; border-top: 1px solid var(--iron); margin: 2.4rem 0; }
+  .prose table { width: 100%; border-collapse: collapse; margin: 0 0 1.4rem; font-size: 1rem; }
+  .prose th, .prose td { text-align: left; padding: .7rem .6rem; border-bottom: 1px solid var(--iron); vertical-align: top; }
+  .prose th { font: 700 .72rem/1.2 var(--font-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--silver); }
+  .prose .cta { margin-top: .2rem; }
+  .embed { margin-top: 2rem; background: #fff; border: 1px solid var(--iron); }
+  .embed iframe { display: block; width: 100%; height: 80vh; min-height: 40rem; border: 0; }
+  .team { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: clamp(.8rem, 1.6vw, 1.4rem); margin-top: 2.4rem; }
+  .team .coach { width: auto; }
+  .team .coach small + small { margin-top: .2rem; color: var(--accent); }
+  .findus { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(1.6rem, 4vw, 3rem); margin-top: 2.4rem; }
+  .map iframe { display: block; width: 100%; height: 100%; min-height: 26rem; border: 0; filter: grayscale(.6) invert(.9) hue-rotate(180deg); }
+  .contact { display: grid; gap: .9rem; align-content: start; padding: clamp(1.2rem, 2.6vw, 2rem); background: var(--sc-surface); border: 1px solid var(--iron); box-shadow: var(--edge); }
+  .contact h2 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); color: var(--accent); }
+  .contact label { display: grid; gap: .35rem; font: 700 .72rem/1.2 var(--font-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--silver); }
+  .contact input, .contact textarea { font: 400 1rem/1.4 var(--sc-font-text); color: var(--sc-ink); background: var(--sc-canvas); border: 1px solid var(--iron); padding: .75rem .8rem; }
+  .contact input:focus, .contact textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; }
+  .contact .cta { border: 0; cursor: pointer; justify-self: start; margin-top: .4rem; }
+  @media (max-width: 860px) { .findus { grid-template-columns: 1fr; } }
+  .posts { list-style: none; margin: 2.4rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: clamp(.8rem, 1.6vw, 1.4rem); }
+  .post-card a { display: block; height: 100%; color: var(--sc-ink); text-decoration: none; background: var(--sc-surface); background-image: var(--wire-h); border: 1px solid var(--iron); box-shadow: var(--edge); transition: border-color 160ms; }
+  .post-card a:hover, .post-card a:focus-visible { border-color: var(--accent); outline: none; }
+  .post-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; }
+  .post-card__meta { display: block; padding: 1rem 1.1rem 0; font: 700 .64rem/1.4 var(--font-caption); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+  .post-card b { display: block; padding: .5rem 1.1rem 0; font: 800 clamp(1.2rem, 1.6vw, 1.45rem)/1.15 var(--sc-font-display); }
+  .post-card__sum { display: block; padding: .5rem 1.1rem 1.2rem; font-size: .9rem; line-height: 1.5; color: var(--sc-ink-soft); }
+  .backlink { margin-top: 2.4rem; }
+  .pageclose { border-top: 1px solid var(--iron); }
+  .pageclose .big { font-size: clamp(2.2rem, 5.6vw, 4.8rem); }
+  .pageclose .wrap > p { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 1rem 0 0; }
+  .prose .video { position: relative; aspect-ratio: 16 / 9; margin: 1.6rem 0; background: var(--sc-surface); }
+  .prose .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

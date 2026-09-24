@@ -1,0 +1,14 @@
+{
+  "name": "crossfit-warrington-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "npx --yes serve dist -l 4520"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^15.0.0",
+    "mustache": "^4.2.0"
+  }
+}
