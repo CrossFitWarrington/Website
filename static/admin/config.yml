@@ -109,6 +109,7 @@ collections:
               - { name: photo_1, label: "Photo 1", widget: image, choose_url: false }
               - { name: photo_2, label: "Photo 2", widget: image, choose_url: false }
               - { name: photo_3, label: "Photo 3", widget: image, choose_url: false }
+              - { name: wide, label: "Wide photo (replaces Photo 1; landscape)", widget: image, choose_url: false, required: false }
           - name: join
             label: "3. Join us"
             widget: object
@@ -221,6 +222,7 @@ collections:
               - { name: button_note, label: "Small line in the button", widget: string }
               - { name: second, label: "WhatsApp line", widget: string }
               - { name: photo, label: Photo, widget: image, choose_url: false }
+              - { name: wide, label: "Wide photo (used instead of Photo; landscape)", widget: image, choose_url: false, required: false }
 
       - name: coaches
         label: Coaches

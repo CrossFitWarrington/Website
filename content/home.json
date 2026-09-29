@@ -6,14 +6,6 @@
     "heading": "Find your pace, your people, and a workout that adapts to you.",
     "photos": [
       {
-        "image": "/assets/r6-03.jpg",
-        "position": ""
-      },
-      {
-        "image": "/assets/r6-01.jpg",
-        "position": "50% 4%"
-      },
-      {
         "image": "/assets/r6-34.jpg",
         "position": ""
       },
@@ -22,19 +14,27 @@
         "position": ""
       },
       {
-        "image": "/assets/r6-25.jpg",
+        "image": "/assets/r9-01.jpg",
         "position": ""
       },
       {
-        "image": "/assets/r6-05.jpg",
+        "image": "/assets/r9-02.jpg",
         "position": ""
       },
       {
-        "image": "/assets/r6-24.jpg",
+        "image": "/assets/r9-03.jpg",
         "position": ""
       },
       {
-        "image": "/assets/r6-37.jpg",
+        "image": "/assets/r9-04.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r9-05.jpg",
+        "position": ""
+      },
+      {
+        "image": "/assets/r9-06.jpg",
         "position": ""
       }
     ]
@@ -43,6 +43,7 @@
     "photo_1": "/assets/r6-25.jpg",
     "photo_2": "/assets/r6-31.jpg",
     "photo_3": "/assets/r6-30.jpg",
+    "wide": "/assets/r9-wide-1.jpg",
     "heading": "Where fitness feels like home.",
     "body": "We believe training should be something you actually look forward to. Whether you're stepping into a gym for the first time or you've been training for years, all of our sociable group classes are built around one simple principle: helping you move better, get fitter, and keep showing up. Led by expert coaches who know how to get the best out of every person who walks through the door, there's a class here waiting for you.",
     "middle": "Our programmes are designed to suit all abilities and experience levels. Whether you're completely new to the gym, looking to improve your fitness, or training towards competitive goals, you'll have the coaching, programming and support to keep progressing.\n\nBut CrossFit Warrington is about more than just the workout.\n\nHere, you'll train alongside people who want to see you succeed. You'll be encouraged, challenged and supported every step of the way. We work hard, celebrate each other's progress and, most importantly, have a lot of fun doing it.",
@@ -482,6 +483,7 @@
   "faq_heading": "FAQs.",
   "close": {
     "photo": "/assets/r6-26.jpg",
+    "wide": "/assets/r9-wide-2.jpg",
     "heading": "Your first class is free.",
     "line": "See you at the gym.",
     "button": "Book my free class",

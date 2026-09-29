@@ -32,7 +32,7 @@
   <!-- 2 · Tension, then the turn. Three lines, one at a time, over a tightening frame. -->
   <section class="act turn" data-sc-act="pin" data-sc-span="2.6" data-sc-drift="#0E1013">
     <div data-sc-stage>
-      <img class="turn__bed" src="{{turn.photo_1}}" alt=""><img class="turn__still turn__still--l" src="{{turn.photo_1}}" alt="" width="1080" height="1350">
+      {{#turn.wide}}<img class="turn__wide" src="{{turn.wide}}" alt="" width="2400" height="1600">{{/turn.wide}}{{^turn.wide}}<img class="turn__bed" src="{{turn.photo_1}}" alt=""><img class="turn__still turn__still--l" src="{{turn.photo_1}}" alt="" width="1080" height="1350">{{/turn.wide}}
       <div class="turn__fade" data-sc-cue="0.24" data-sc-rise="0" aria-hidden="true"><img class="turn__bed" src="{{turn.photo_2}}" alt=""><img class="turn__still turn__still--r" src="{{turn.photo_2}}" alt="" width="1080" height="1350"></div>
       <div class="turn__fade" data-sc-cue="0.52" data-sc-rise="0" aria-hidden="true"><img class="turn__bed" src="{{turn.photo_3}}" alt=""><img class="turn__still" src="{{turn.photo_3}}" alt="" width="1080" height="1350"></div>
       <div class="sc-copy sc-copy--trail" data-sc-cue="0 0.30 0">
@@ -157,7 +157,7 @@
 
   <!-- 7 · Your first class is free. Resolves; holds. -->
   <section class="act close" id="join" data-sc-act="flow" data-sc-drift="#0A0B0D">
-    <img class="close__bed" src="{{close.photo}}" alt="" loading="lazy"><img class="close__still" src="{{close.photo}}" alt="" width="1080" height="1350" loading="lazy">
+    {{#close.wide}}<img class="close__wide" src="{{close.wide}}" alt="" width="2400" height="1600" loading="lazy">{{/close.wide}}{{^close.wide}}<img class="close__bed" src="{{close.photo}}" alt="" loading="lazy"><img class="close__still" src="{{close.photo}}" alt="" width="1080" height="1350" loading="lazy">{{/close.wide}}
     <div class="close__scrim" aria-hidden="true"></div>
     <div class="wrap close__inner" data-sc-in data-sc-stagger="70">
       <h2 class="big">{{close.heading}}</h2>

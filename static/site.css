@@ -124,8 +124,9 @@
   .turn__still { position: absolute; top: 4.6rem; bottom: 0; left: 50%; height: calc(100% - 4.6rem); width: auto; max-width: none; aspect-ratio: 4 / 5; translate: -50% 0; object-fit: cover; transform: scale(calc(1 + var(--sc-p, 0) * .04)); transform-origin: 50% 0; filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); box-shadow: 0 0 90px 30px rgba(0,0,0,.55); }
   @media (min-aspect-ratio: 1 / 1) { .turn__still--l { left: 6vw; translate: none; } .turn__still--r { left: auto; right: 6vw; translate: none; } }   /* the photo stands away from its copy plate */
   @media (max-aspect-ratio: 4 / 5) { .turn__still { left: 0; width: 100%; translate: none; } }
+  .turn__wide { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 40%; transform: scale(calc(1 + var(--sc-p, 0) * .04)); filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); }   /* a wide shot fills the frame; no blurred bed needed (29 Sep) */
   .turn__fade { position: absolute; inset: 0; }   /* one photograph per line: the cue fades the wrapper, the bed keeps its own scale */
-  @media (prefers-reduced-motion: reduce) { .turn__bed { transform: scale(1.15); } .turn__still { transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .turn__bed { transform: scale(1.15); } .turn__still, .turn__wide { transform: none; } }
   .turn .sc-copy--trail { top: 50%; bottom: auto; translate: 0 -50%; }
   .turn .sc-copy--lead { top: 50%; bottom: auto; translate: 0 -50%; }
   @media (min-width: 861px) { .turn .sc-copy--center { top: auto; bottom: 5vh; translate: -50% 0; } }   /* sits low, so the two faces above it stay in view */
@@ -264,6 +265,7 @@
   .close__still { position: absolute; z-index: 2; right: clamp(2rem, 6vw, 6rem); top: 50vh; translate: 0 -50%; height: min(78vh, 46rem); width: auto; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: var(--edge), 0 30px 80px -20px rgba(0,0,0,.9); }
   @media (min-width: 1001px) { .close__inner { padding-right: calc(min(78vh, 46rem) * .8 + clamp(3rem, 8vw, 8rem)); } }
   @media (max-width: 1000px) { .close__still { display: none; } }
+  .close__wide { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 60% 40%; filter: var(--grade); z-index: 0; }   /* a wide shot: sharp, the scrim keeps the words readable */
   .close__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(var(--ground-rgb),.94) 0, rgba(var(--ground-rgb),.86) 45%, rgba(var(--ground-rgb),.4) 75%, rgba(var(--ground-rgb),.2) 100%); }
   .close__inner { position: relative; z-index: 2; padding-block: clamp(5rem, 12vh, 8rem); }
   .close__inner > p { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 1rem 0 0; }
