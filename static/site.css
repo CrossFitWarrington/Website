@@ -110,7 +110,7 @@
   /* ---- Act 1: the picture board (Sian, 17 Sep: "have we lost the picture board?") */
   /* Eight of her new photographs, 4 x 2 (2 x 4 on a phone), easing in as the
      pin runs; the headline plate sits over the left side. */
-  .board { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 3px; background: var(--sc-canvas);   /* minmax(0,…): Safari otherwise lets the photos stretch the rows (iPhone showed slivers, 24 Sep) */ transform: scale(calc(1.06 - var(--sc-p, 0) * .06)); }
+  .board { position: absolute; inset: var(--bar-h, 4.6rem) 0 0 0; transform-origin: 50% 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 3px; background: var(--sc-canvas);   /* minmax(0,…): Safari otherwise lets the photos stretch the rows (iPhone showed slivers, 24 Sep) */ transform: scale(calc(1.06 - var(--sc-p, 0) * .06)); }
   .board img { display: block; width: 100%; height: auto; align-self: stretch; object-fit: cover; object-position: 50% 30%; min-height: 0; }   /* stretch, not height:100%: Safari resolves the % against the whole board */
   @media (max-width: 720px) { .board { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); } .board img:nth-child(n+7) { display: none; } }   /* a phone: six bigger photos, not eight slivers */
   @media (prefers-reduced-motion: reduce) { .board { transform: none; } }
@@ -121,15 +121,16 @@
      went soft and pixelated. Now a blurred, darkened wash of the same photo fills the frame and the photo
      itself sits sharp at its own shape in the middle, below the banner, so no head is cut. */
   .turn__bed { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(calc(1.15 + var(--sc-p, 0) * .05)); filter: var(--grade) blur(28px) brightness(calc(.5 - var(--sc-p, 0) * .2)); }
-  .turn__still { position: absolute; top: 4.6rem; bottom: 0; left: 50%; height: calc(100% - 4.6rem); width: auto; max-width: none; aspect-ratio: 4 / 5; translate: -50% 0; object-fit: cover; transform: scale(calc(1 + var(--sc-p, 0) * .04)); transform-origin: 50% 0; filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); box-shadow: 0 0 90px 30px rgba(0,0,0,.55); }
+  .turn__still { position: absolute; top: var(--bar-h, 4.6rem); bottom: 0; left: 50%; height: calc(100% - var(--bar-h, 4.6rem)); width: auto; max-width: none; aspect-ratio: 4 / 5; translate: -50% 0; object-fit: cover; transform: scale(calc(1 + var(--sc-p, 0) * .04)); transform-origin: 50% 0; filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); box-shadow: 0 0 90px 30px rgba(0,0,0,.55); }
   @media (min-aspect-ratio: 1 / 1) { .turn__still--l { left: 6vw; translate: none; } .turn__still--r { left: auto; right: 6vw; translate: none; } }   /* the photo stands away from its copy plate */
   @media (max-aspect-ratio: 4 / 5) { .turn__still { left: 0; width: 100%; translate: none; } }
-  .turn__wide { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 40%; transform: scale(calc(1 + var(--sc-p, 0) * .04)); filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); }   /* a wide shot fills the frame; no blurred bed needed (29 Sep) */
+  .turn__wide { position: absolute; top: var(--bar-h, 4.6rem); left: 0; width: 100%; height: calc(100% - var(--bar-h, 4.6rem)); max-width: none; object-fit: cover; object-position: 50% 12%; transform: scale(calc(1 + var(--sc-p, 0) * .04)); transform-origin: 50% 0; filter: var(--grade) brightness(calc(1 - var(--sc-p, 0) * .35)); }   /* starts under the menu bar, grows downward, so heads are never cut (29 Sep); a wide shot fills the frame; no blurred bed needed (29 Sep) */
   .turn__fade { position: absolute; inset: 0; }   /* one photograph per line: the cue fades the wrapper, the bed keeps its own scale */
   @media (prefers-reduced-motion: reduce) { .turn__bed { transform: scale(1.15); } .turn__still, .turn__wide { transform: none; } }
   .turn .sc-copy--trail { top: 50%; bottom: auto; translate: 0 -50%; }
   .turn .sc-copy--lead { top: 50%; bottom: auto; translate: 0 -50%; }
   @media (min-width: 861px) { .turn .sc-copy--center { top: auto; bottom: 5vh; translate: -50% 0; } }   /* sits low, so the two faces above it stay in view */
+  @media (max-width: 860px) { .turn .sc-copy--center { top: auto; bottom: 8vh; translate: none; } }   /* and on a phone, so the rower's face stays in view (29 Sep) */
   @media (max-width: 720px) { .turn .sc-copy--trail, .turn .sc-copy--lead { top: auto; bottom: 8vh; translate: none; } }
 
   /* ---- The hub: ordinary sections, done well ---------------------------- */
@@ -265,7 +266,7 @@
   .close__still { position: absolute; z-index: 2; right: clamp(2rem, 6vw, 6rem); top: 50vh; translate: 0 -50%; height: min(78vh, 46rem); width: auto; aspect-ratio: 4 / 5; object-fit: cover; box-shadow: var(--edge), 0 30px 80px -20px rgba(0,0,0,.9); }
   @media (min-width: 1001px) { .close__inner { padding-right: calc(min(78vh, 46rem) * .8 + clamp(3rem, 8vw, 8rem)); } }
   @media (max-width: 1000px) { .close__still { display: none; } }
-  .close__wide { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 60% 40%; filter: var(--grade); z-index: 0; }   /* a wide shot: sharp, the scrim keeps the words readable */
+  .close__wide { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 60% 20%; filter: var(--grade); z-index: 0; }   /* a wide shot: sharp, the scrim keeps the words readable */
   .close__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(var(--ground-rgb),.94) 0, rgba(var(--ground-rgb),.86) 45%, rgba(var(--ground-rgb),.4) 75%, rgba(var(--ground-rgb),.2) 100%); }
   .close__inner { position: relative; z-index: 2; padding-block: clamp(5rem, 12vh, 8rem); }
   .close__inner > p { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 1rem 0 0; }

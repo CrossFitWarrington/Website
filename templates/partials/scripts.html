@@ -1,6 +1,8 @@
 <script src="/scrollcraft.js"></script>
 <script>
   ScrollCraft.mount(document.body);
+  // photos start under the menu bar, whatever its height (50–75px), so no head sits behind it
+  (function () { var bar = document.querySelector('.bar'), set = function () { document.documentElement.style.setProperty('--bar-h', bar.offsetHeight + 'px'); }; set(); if (window.ResizeObserver) new ResizeObserver(set).observe(bar); })();
   // the menu button on a phone
   (function () {
     var btn = document.querySelector('.menu-btn');

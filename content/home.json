@@ -7,7 +7,7 @@
     "photos": [
       {
         "image": "/assets/r6-34.jpg",
-        "position": ""
+        "position": "50% 0%"
       },
       {
         "image": "/assets/r6-14.jpg",
@@ -45,9 +45,9 @@
     "photo_3": "/assets/r6-30.jpg",
     "wide": "/assets/r9-wide-1.jpg",
     "wide_2": "/assets/r9-wide-3.jpg",
-    "wide_2_position": "40% 30%",
+    "wide_2_position": "40% 0%",
     "wide_3": "/assets/r9-wide-4.jpg",
-    "wide_3_position": "74% 35%",
+    "wide_3_position": "74% 25%",
     "heading": "Where fitness feels like home.",
     "body": "We believe training should be something you actually look forward to. Whether you're stepping into a gym for the first time or you've been training for years, all of our sociable group classes are built around one simple principle: helping you move better, get fitter, and keep showing up. Led by expert coaches who know how to get the best out of every person who walks through the door, there's a class here waiting for you.",
     "middle": "Our programmes are designed to suit all abilities and experience levels. Whether you're completely new to the gym, looking to improve your fitness, or training towards competitive goals, you'll have the coaching, programming and support to keep progressing.\n\nBut CrossFit Warrington is about more than just the workout.\n\nHere, you'll train alongside people who want to see you succeed. You'll be encouraged, challenged and supported every step of the way. We work hard, celebrate each other's progress and, most importantly, have a lot of fun doing it.",
