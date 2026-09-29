@@ -110,6 +110,10 @@ collections:
               - { name: photo_2, label: "Photo 2", widget: image, choose_url: false }
               - { name: photo_3, label: "Photo 3", widget: image, choose_url: false }
               - { name: wide, label: "Wide photo (replaces Photo 1; landscape)", widget: image, choose_url: false, required: false }
+              - { name: wide_2, label: "Wide photo 2 (replaces Photo 2; landscape)", widget: image, choose_url: false, required: false }
+              - { name: wide_2_position, label: "Wide photo 2 focus (e.g. 40% 30%; blank = centre)", widget: string, required: false }
+              - { name: wide_3, label: "Wide photo 3 (replaces Photo 3; landscape)", widget: image, choose_url: false, required: false }
+              - { name: wide_3_position, label: "Wide photo 3 focus (e.g. 40% 30%; blank = centre)", widget: string, required: false }
           - name: join
             label: "3. Join us"
             widget: object
