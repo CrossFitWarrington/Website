@@ -385,3 +385,18 @@
   .pageclose .wrap > p { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 1rem 0 0; }
   .prose .video { position: relative; aspect-ratio: 16 / 9; margin: 1.6rem 0; background: var(--sc-surface); }
   .prose .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  /* ---- Price board (memberships page): blue header bars, white cards, black type. Ash, 1 Oct ---- */
+  .page--memberships .prose { max-width: none; }
+  .page--memberships .prose > :not(.prices) { max-width: 46rem; }
+  .prices { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: clamp(1rem, 2vw, 1.6rem); margin: 0 0 2.4rem; align-items: start; }
+  .prices__card { background: #fff; color: var(--accent-ink); }
+  .prose .prices__card h3 { margin: 0; padding: .8rem 1.2rem; background: var(--accent); color: #fff; font-size: clamp(1.3rem, 2vw, 1.6rem); text-transform: uppercase; letter-spacing: .02em; text-align: center; }
+  .prose .prices__card ul { list-style: none; margin: 0; padding: 0 1.2rem; color: var(--accent-ink); }
+  .prices__card li { display: grid; gap: .15rem; margin: 0; padding: 1.1rem 0; border-bottom: 1px solid #D5D9DE; }
+  .prices__card li:last-child { border-bottom: 0; }
+  .prices__card b { font: 700 1.05rem/1.2 var(--sc-font-display); text-transform: uppercase; letter-spacing: .02em; }
+  .prose .prices__card strong { font: 800 1.7rem/1.1 var(--sc-font-display); color: var(--accent-ink); }
+  .prices__card strong small { font-size: .62em; font-weight: 600; }
+  .prices__card span { font-size: .92rem; line-height: 1.45; }
+  .prose .prices__note { margin: 0; padding: .9rem 1.2rem 1.1rem; border-top: 1px solid #D5D9DE; font-size: .88rem; line-height: 1.45; color: var(--accent-ink); }
