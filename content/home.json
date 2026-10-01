@@ -87,9 +87,9 @@
       {
         "title": "Couch to CrossFit",
         "label": "New to CrossFit · Group Foundations · 6-week course",
-        "photo": "/assets/r6-03.jpg",
-        "photo_description": "A Couch to CrossFit group celebrating together at the end of a session",
-        "position": "50% 35%",
+        "photo": "/assets/r10-couch.jpg",
+        "photo_description": "A Couch to CrossFit member laughing with her coach mid-session",
+        "position": "50% 15%",
         "text": "You'll progress alongside a supportive cohort of beginners, building your fitness, community, and confidence together week by week.",
         "price_line": "",
         "tall": false,
@@ -111,9 +111,9 @@
       {
         "title": "Become a member",
         "label": "Experienced",
-        "photo": "/assets/r6-32.jpg",
-        "photo_description": "Two CrossFit Warrington members smiling side by side",
-        "position": "50% 15%",
+        "photo": "/assets/r10-member.jpg",
+        "photo_description": "A busy CrossFit Warrington class between workouts",
+        "position": "45% 50%",
         "text": "**Find the membership that fits your life.**\n\nEvery membership includes top coaching, 25+ classes per week to choose from, and a community that makes showing up the easy part.\n\nWe offer a range of membership options depending on how often you would like to train.",
         "price_line": "Memberships start from as little as £65.92.",
         "tall": true,
@@ -131,9 +131,9 @@
       {
         "title": "Kids",
         "label": "",
-        "photo": "/assets/r6-14.jpg",
-        "photo_description": "Children high-fiving a coach at a CrossFit Kids class",
-        "position": "50% 45%",
+        "photo": "/assets/r10-kids.jpg",
+        "photo_description": "A coach helping a young boy hold a training bar at CrossFit Kids",
+        "position": "50% 0%",
         "text": "Our kids programme at CrossFit Warrington focuses on building physical literacy first. Without the pressure of heavy competition, we help kids move well, build body confidence, and genuinely enjoy being active.\n\nWith small class sizes and expert coaching, your child gets the personal attention they need to build healthy habits and learn to love movement for life.\n\n**6-week terms throughout the year.**",
         "price_line": "",
         "tall": false,
@@ -151,9 +151,9 @@
       {
         "title": "Adaptive",
         "label": "",
-        "photo": "/assets/r6-20.jpg",
-        "photo_description": "A coach supporting a member to walk during an Adaptive CrossFit session",
-        "position": "50% 25%",
+        "photo": "/assets/r10-adaptive.jpg",
+        "photo_description": "A member training on the rig during an Adaptive CrossFit session",
+        "position": "50% 10%",
         "text": "**Empowering individuals through movement.**\n\nFitness should be truly inclusive and accessible to everyone, regardless of ability. Our adaptive programme is built on the belief that everyone deserves the opportunity to train, grow, and challenge themselves in a supportive environment.",
         "price_line": "",
         "tall": false,
@@ -251,6 +251,26 @@
             "url": "/online-coaching"
           }
         ]
+      },
+      {
+        "title": "Team Training",
+        "label": "",
+        "photo": "/assets/r10-team.jpg",
+        "photo_description": "A women's rugby league team sitting together under the CrossFit Warrington sign",
+        "position": "50% 80%",
+        "text": "Unlock your team's full potential with CrossFit Warrington. Our proven off-season training combines dynamic mobility, compound strength lifts, and high-intensity conditioning to build raw power, speed, endurance, and injury resilience.\n\nFully scalable for all levels—from youth squads to elite performers—our expert-led sessions have proudly powered top local clubs like the Warrington Wolves Youth and St Helens Women's Rugby League.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20team%20and%20group%20training."
+          },
+          {
+            "label": "Find out more",
+            "url": "/team-training"
+          }
+        ]
       }
     ]
   },
@@ -263,10 +283,11 @@
     "more_link": "More about dropping in"
   },
   "community": {
-    "photo": "/assets/r6-28.jpg",
-    "photo_description": "Members of the CrossFit Warrington community together in the gym",
+    "photo": "/assets/r10-egos.jpg",
+    "photo_description": "CrossFit Warrington members high-fiving and cheering each other on",
     "heading": "No egos here.",
-    "text": "Welcome to your new fitness home. CrossFit Warrington is a thriving community of everyday people lifting each other up through every tough workout and shared laugh. Whatever your age, background, or current fitness level, you belong here from day one. You don't need to get fit to join us—just take that first step."
+    "text": "Welcome to your new fitness home. CrossFit Warrington is a thriving community of everyday people lifting each other up through every tough workout and shared laugh. Whatever your age, background, or current fitness level, you belong here from day one. You don't need to get fit to join us—just take that first step.",
+    "photo_position": "55% 30%"
   },
   "reviews": {
     "kicker": "From babies to pensioners. Your pace, your class, your community.",
@@ -305,7 +326,7 @@
       {
         "quote": "",
         "name": "",
-        "photo": "/assets/r6-29.jpg"
+        "photo": "/assets/r10-review-1.jpg"
       },
       {
         "quote": "It feels like home. Super friendly CrossFit affiliate. Highly qualified coaches.",
@@ -318,19 +339,24 @@
         "photo": ""
       },
       {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r10-review-2.jpg"
+      },
+      {
         "quote": "My tribe. My vibe. This place is more than a place to get fit. It's a family. People who support you, lift you up physically and mentally!!",
         "name": "Lana, Google review",
         "photo": ""
       },
       {
-        "quote": "",
-        "name": "",
-        "photo": "/assets/r6-08.jpg"
-      },
-      {
         "quote": "Had a PT session. Sian was incredibly supportive. The gym is inviting and I was instantly put at ease.",
         "name": "Rachel, Google review",
         "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r10-review-3.jpg"
       },
       {
         "quote": "CrossFit Warrington is a community first before it's a gym, which is what differentiates it from other gyms.",
@@ -345,7 +371,7 @@
       {
         "quote": "",
         "name": "",
-        "photo": "/assets/r6-36.jpg"
+        "photo": "/assets/r10-review-4.jpg"
       },
       {
         "quote": "Everyone makes you feel welcome when you first join, can not fault it at all!",
@@ -358,14 +384,14 @@
         "photo": ""
       },
       {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r10-review-5.jpg"
+      },
+      {
         "quote": "Very friendly and inclusive! Can't fault it at all!",
         "name": "Sarah, Google review",
         "photo": ""
-      },
-      {
-        "quote": "",
-        "name": "",
-        "photo": "/assets/r6-26.jpg"
       },
       {
         "quote": "It's been the best decision I have made in terms of improving my fitness.",
@@ -373,9 +399,19 @@
         "photo": ""
       },
       {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r10-review-6.jpg"
+      },
+      {
         "quote": "I started Couch to CrossFit in January — it's the only place I've seen offer such a gentle, supportive intro to CrossFit. After the 5-week course, I was hooked and joined properly. Even though there's a CrossFit gym 2 minutes from me, I choose to travel 20 minutes to CrossFit Warrington.",
         "name": "Claire, site testimonial",
         "photo": ""
+      },
+      {
+        "quote": "",
+        "name": "",
+        "photo": "/assets/r10-review-7.jpg"
       }
     ]
   },
@@ -451,36 +487,52 @@
     "button_note": "Pick any class. Takes a minute.",
     "photos": [
       {
-        "image": "/assets/r6-09.jpg",
+        "image": "/assets/r10-couch.jpg",
+        "position": "50% 20%"
+      },
+      {
+        "image": "/assets/r10-member.jpg",
+        "position": "45% 30%"
+      },
+      {
+        "image": "/assets/r10-adaptive.jpg",
+        "position": "50% 15%"
+      },
+      {
+        "image": "/assets/r10-kids.jpg",
+        "position": "50% 0%"
+      },
+      {
+        "image": "/assets/r10-egos.jpg",
+        "position": "55% 30%"
+      },
+      {
+        "image": "/assets/r10-review-1.jpg",
         "position": "50% 25%"
       },
       {
-        "image": "/assets/r6-03.jpg",
-        "position": "50% 35%"
-      },
-      {
-        "image": "/assets/r6-34.jpg",
+        "image": "/assets/r10-review-2.jpg",
         "position": "50% 25%"
       },
       {
-        "image": "/assets/r6-35.jpg",
-        "position": "50% 40%"
+        "image": "/assets/r10-review-3.jpg",
+        "position": "85% 30%"
       },
       {
-        "image": "/assets/r6-28.jpg",
-        "position": "50% 30%"
+        "image": "/assets/r10-review-4.jpg",
+        "position": "45% 30%"
       },
       {
-        "image": "/assets/r6-27.jpg",
-        "position": "50% 25%"
+        "image": "/assets/r10-review-5.jpg",
+        "position": "50% 10%"
       },
       {
-        "image": "/assets/r6-24.jpg",
-        "position": "50% 40%"
+        "image": "/assets/r10-review-6.jpg",
+        "position": "50% 10%"
       },
       {
-        "image": "/assets/r6-25.jpg",
-        "position": "50% 40%"
+        "image": "/assets/r10-review-7.jpg",
+        "position": "50% 15%"
       }
     ]
   },

@@ -80,7 +80,7 @@
   <!-- 4 · Community. The authored silence: one paragraph, one photograph, nothing fires. -->
   <section class="act hub egos" id="egos" data-sc-act="flow" data-sc-drift="#0C0D10" data-authored-silence="one held read beside one tall photograph">
     <div class="wrap egos__grid">
-      <figure class="egos__photo"><img src="{{community.photo}}" alt="{{community.photo_description}}" width="1080" height="1350" loading="lazy"></figure>
+      <figure class="egos__photo"><img src="{{community.photo}}" alt="{{community.photo_description}}" width="1080" height="1350" loading="lazy"{{#community.photo_position}} style="object-position: {{community.photo_position}}"{{/community.photo_position}}></figure>
       <div class="egos__read" data-sc-in>
         <h2>{{community.heading}}</h2>
         <p>{{community.text}}</p>

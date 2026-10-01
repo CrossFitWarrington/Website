@@ -9,28 +9,58 @@ photo_description: Two members throwing medicine balls up at a wall target
 
 ## What is it?
 
-CrossFit is a global fitness brand with a community and a methodology of constantly varied functional movements performed at relative intensity. In practice, that means coached workouts that build strength, conditioning, and confidence at a level that is challenging but appropriate for you.
+CrossFit is a global fitness community and methodology centered on constantly varied, functional movements performed at relative intensity. At CrossFit Warrington, we use natural, everyday movements—like squatting, pushing, pulling, and lifting—turning up the volume to build life-ready strength, cardio, and confidence tailored to your capabilities.
 
-Every CrossFit class is coached. Every workout can be scaled. Every person starts from where they are.
+Every class is coached. Every workout can be scaled. Every person starts right where they are.
 
-### Coached
+### Coached From Day One
 
-You are not left to figure it out alone. Experienced CrossFit coaches help you learn the movements, adjust the workout, improve technique, and train safely.
+You're never left guessing. Experienced professionals help you learn foundational movements, adjust workouts, and train safely.
 
-### Scaled
+### Scaled to Your Level
 
-The same workout can be adapted for a beginner, a grandparent, a competitive athlete, or someone returning after years away. The CrossFit methodology is designed to meet you where you are.
+The exact same workout works for a beginner, a grandparent, or an elite athlete.
 
-### Varied
+### Varied for Real Fitness
 
-No two days are exactly the same. You train different movements, skills, and time domains, which helps you build strength, stamina, mobility, coordination, and confidence - and you won’t get bored.
+Routines change daily, blending gymnastics, weightlifting, and cardio so you build total-body fitness without the boredom.
 
-### Measured
+### Progress You Can Measure
 
-CrossFit training helps you track progress over time. You can see improvements in your strength, endurance, movement quality, energy, confidence, and overall health.
+Track your journey over time to see real improvements in strength, endurance, energy, and overall health.
 
 ## It’s Hard. That’s the Point
 
 ![Members carrying weights along the path outside the gym](/assets/pages/what-is-crossfit-1.jpg)
 
-CrossFit Inc.
+CrossFit is not a quick fix or a 30-day trend; it’s an evidence-based approach to long-term health.
+
+## Anyone Can Do CrossFit
+
+Common doubts and their realities:
+
+### “I’m worried I’ll get injured.”
+
+**Reality:** Classes are fully coached. Your coach guides you through proper technique and tailors movements to fit your body and experience.
+
+### “I’m not fit enough to start.”
+
+**Reality:** You don't need to get fit before joining—CrossFit is how you get fit. Workouts scale to your current level and grow with you.
+
+### “CrossFit looks too intense for me.”
+
+**Reality:** Intensity is relative. Coaches adjust weight, pace, and movements so you are safely challenged at your own speed.
+
+### “I’m worried everyone will be competitive.”
+
+**Reality:** While some people compete, the majority are simply building strength for everyday life. The focus is on shared effort, not comparison.
+
+### “I’ve had injuries or limitations before.”
+
+**Reality:** Workouts are easily adapted around past injuries and mobility limits to ensure safe, consistent progress.
+
+### “I’m afraid I won’t belong.”
+
+**Reality:** At CrossFit Warrington, our community thrives on inclusivity. Members bring all kinds of backgrounds and goals, yet everyone roots for each other.
+
+**It’s hard. That’s the point. CrossFit is for anyone, but not for everyone.**
