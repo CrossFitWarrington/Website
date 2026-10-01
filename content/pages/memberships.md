@@ -46,7 +46,7 @@ Includes one month of unlimited access once you've completed your three sessions
 <ul>
 <li><b>1-2-1 Foundations</b><strong>£99</strong><span>3 one-to-one sessions, then one month of unlimited access once you've completed them.</span></li>
 <li><b>Individualised nutrition coaching</b><strong>£150</strong><span>12 weeks.</span></li>
-<li><b>Online coaching</b><strong>£55</strong></li>
+<li><b>Online coaching</b><strong>£55 <small>/month</small></strong></li>
 <li><b>CrossFit Kids</b><strong>£55</strong><span>6 week block, one class a week, ages 4 and up.</span></li>
 <li><b>Couch to CrossFit</b><strong>£55</strong><span>6 week block, one class a week.</span></li>
 </ul>
