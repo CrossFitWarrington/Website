@@ -53,7 +53,7 @@ const shared = {
 const partials = Object.fromEntries(fs.readdirSync('templates/partials').map(f => [path.basename(f, '.html'), read(`templates/partials/${f}`)]));
 const tpl = name => read(`templates/${name}.html`);
 const gym = {
-  '@context': 'https://schema.org', '@type': 'ExerciseGym', name: 'CrossFit Warrington', legalName: 'CF Warrington Ltd',
+  '@context': 'https://schema.org', '@type': 'ExerciseGym', '@id': SITE + '/#gym', name: 'CrossFit Warrington', legalName: 'CF Warrington Ltd',
   description: "Warrington's only official CrossFit affiliate, based in Woolston. Coached classes for every age and ability, plus Couch to CrossFit, Kids, Adaptive, personal training, nutrition and online coaching.",
   url: SITE + '/', image: SITE + '/assets/r6-03.jpg', logo: SITE + '/assets/cfw_lockup_horizontal_reversed.svg',
   telephone: '+44 ' + shared.phone_tel.slice(1), email: site.email,
@@ -67,6 +67,9 @@ const gym = {
 };
 const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.questions.map(q => ({ '@type': 'Question', name: q.question, acceptedAnswer: { '@type': 'Answer', text: text(q.answer_html) } })) };
 const ld = o => JSON.stringify(o).replace(/</g, '\\u003c');
+// every inner page and post names the gym it belongs to, so Google and AI assistants tie it back to the business
+const gymRef = { '@type': 'ExerciseGym', '@id': SITE + '/#gym', name: gym.name, url: gym.url, telephone: gym.telephone, address: gym.address };
+const pageLd = (urlPath, title, description) => ld({ '@context': 'https://schema.org', '@type': 'WebPage', url: SITE + urlPath, name: title, description, about: gymRef, publisher: gymRef });
 
 const pages = [];   // [url path, html]
 const render = (name, view, urlPath, head) => {
@@ -101,7 +104,9 @@ const posts = mdFiles('content/blog').map(f => {
 }).sort((a, b) => (a.date_iso < b.date_iso ? 1 : -1));
 for (const p of posts) {
   render('post', { post: p, date_label: p.date_label, categories: p.categories, categories_label: p.categories_label, body_html: md(p.body) },
-    `/blog/${p.slug}`, { title: `${p.title} | CrossFit Warrington`, description: p.summary || text(md(p.body)).slice(0, 155), image: p.photo, og_type: 'article' });
+    `/blog/${p.slug}`, { title: `${p.seo_title || p.title} | CrossFit Warrington`, description: p.summary || text(md(p.body)).slice(0, 155), image: p.photo, og_type: 'article',
+      jsonld: [ld({ '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, datePublished: p.date_iso, url: `${SITE}/blog/${p.slug}`,
+        image: p.photo ? SITE + p.photo : gym.image, author: p.author ? { '@type': 'Person', name: p.author } : gymRef, publisher: gymRef, description: p.summary || undefined })] });
 }
 
 // ---- pages -----------------------------------------------------------------
@@ -111,9 +116,9 @@ for (const f of mdFiles('content/pages')) {
   need(data, ['title', 'description', 'heading'], `Page ${f}`);
   const layout = data.layout || 'page';
   render('page', {
-    page: data, slug, body_html: md(content),
+    page: { ...data, photo_description: data.photo_description || data.heading }, slug, body_html: md(content),
     [`is_${layout}`]: true, posts: layout === 'blog' ? posts : [],
-  }, `/${slug}`, { title: data.title, description: data.description, image: data.photo, noindex: data.noindex, jsonld: layout === 'faqs' ? [ld(faqLd)] : [] });
+  }, `/${slug}`, { title: data.title, description: data.description, image: data.photo, noindex: data.noindex, jsonld: [pageLd(`/${slug}`, data.title, data.description), ...(layout === 'faqs' ? [ld(faqLd)] : []), ...(slug === 'location' ? [ld(gym)] : [])] });
 }
 
 // ---- write + check ---------------------------------------------------------
@@ -146,4 +151,10 @@ const at = base.findIndex(l => l.startsWith('/blog/f/*'));
 fs.writeFileSync(`${OUT}/_redirects`, [...base.slice(0, at), ...postRules, ...base.slice(at)].join('\n'));
 fs.writeFileSync(`${OUT}/sitemap.xml`, `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...urls].filter(u => u !== '/404' && u !== '/thank-you').map(u => `  <url><loc>${SITE}${u}</loc></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(`${OUT}/robots.txt`, `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${SITE}/sitemap.xml\n`);
+const list = (items) => items.map(([t, u, d]) => `- [${t}](${SITE}${u})${d ? `: ${d}` : ''}`).join('\n');
+const pageList = mdFiles('content/pages').map(f => [f, matter(read(`content/pages/${f}`)).data]).filter(([f, d]) => !d.noindex && !['404.md', 'thank-you.md'].includes(f));
+fs.writeFileSync(`${OUT}/llms.txt`, `# CrossFit Warrington\n\n> ${gym.description}\n\n`
+  + `- Address: ${gym.address.streetAddress}, Warrington ${gym.address.postalCode}\n- Phone: ${site.phone}\n- WhatsApp: ${site.whatsapp}\n- Email: ${site.email}\n- First class: free\n\n`
+  + `## Pages\n\n${list([['Home', '/', home.seo_description], ...pageList.map(([f, d]) => [d.heading || d.title, '/' + path.basename(f, '.md'), d.description])])}\n\n`
+  + `## Blog\n\n${list(posts.map(p => [p.title, `/blog/${p.slug}`, p.summary]))}\n`);
 console.log(`Built ${pages.length} pages (${posts.length} blog posts) into ${OUT}/`);

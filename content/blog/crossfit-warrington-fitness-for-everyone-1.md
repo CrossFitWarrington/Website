@@ -1,5 +1,6 @@
 ---
 title: "CrossFit Warrington: Fitness for Everyone"
+seo_title: "CrossFit Isn't Just for Elite Athletes: Fitness for Everyone in Warrington"
 date: 2026-06-01
 author: Sian Edwards
 categories:
