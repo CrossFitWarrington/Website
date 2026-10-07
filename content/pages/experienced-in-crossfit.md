@@ -1,6 +1,6 @@
 ---
 title: Experienced in CrossFit? Join Straight In | CrossFit Warrington
-description: Done CrossFit before? Book a quick movement assessment at CrossFit Warrington and go straight onto the main class timetable.
+description: Done CrossFit before? Book a quick movement assessment at our Warrington gym and go straight onto the main class timetable.
 kicker: Join us
 heading: Experienced in CrossFit
 photo: /assets/r6-16.jpg

@@ -1,6 +1,6 @@
 ---
 title: Meet Our Coaches | CrossFit Warrington
-description: Meet the coaching team at CrossFit Warrington in Woolston, including our adaptive coaching specialists. Who they are and how they coach.
+description: Meet the coaching team at CrossFit Warrington in Woolston, Warrington, including our adaptive coaching specialists.
 layout: coaches
 kicker: Meet the coaches
 heading: The CrossFit Warrington team

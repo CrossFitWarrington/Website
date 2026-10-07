@@ -9,7 +9,7 @@ photo_description: Children high-fiving a coach at a CrossFit Kids class
 
 [Register your interest](mailto:hello@crossfitwarrington.com?subject=CrossFit%20Kids)
 
-## Crossfit Kids and Juniors
+## CrossFit Kids and Juniors
 
 CrossFit Warrington Kids is an exciting and dynamic programme designed to introduce children and teenagers to fitness in a fun, safe, and supportive environment. Tailored to suit the developmental needs of kids and teens of all fitness levels, our sessions focus on building strength, coordination, and flexibility through age-appropriate functional movements.
 

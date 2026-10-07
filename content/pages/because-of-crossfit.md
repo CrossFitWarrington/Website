@@ -1,6 +1,6 @@
 ---
 title: Member Stories | CrossFit Warrington
-description: Real stories from members of CrossFit Warrington — what they could not do before, and what training in Woolston changed for them.
+description: Real stories from members of CrossFit Warrington — what they could not do before, and what training in Woolston, Warrington changed for them.
 kicker: Member stories
 heading: Because of CrossFit, I can ...
 photo: /assets/r6-04.jpg

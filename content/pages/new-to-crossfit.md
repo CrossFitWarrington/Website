@@ -1,6 +1,6 @@
 ---
 title: New to CrossFit? Start Here | CrossFit Warrington
-description: New to CrossFit? Try a free session at CrossFit Warrington in Woolston, meet the coaches and see the gym before you commit to anything.
+description: New to CrossFit? Try a free session at CrossFit Warrington in Woolston, Warrington, meet the coaches and see the gym first.
 kicker: Join us
 heading: New to CrossFit?
 intro: We make sure you learn the basics safely and at your own pace.
