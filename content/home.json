@@ -146,7 +146,8 @@
             "label": "Find out more",
             "url": "/crossfit-kids"
           }
-        ]
+        ],
+        "row_of_four": true
       },
       {
         "title": "Adaptive",
@@ -166,7 +167,8 @@
             "label": "Find out more",
             "url": "/adaptive-crossfit"
           }
-        ]
+        ],
+        "row_of_four": true
       },
       {
         "title": "RACE Series",
@@ -190,7 +192,29 @@
             "label": "Find out more",
             "url": "/race-series"
           }
-        ]
+        ],
+        "row_of_four": true
+      },
+      {
+        "title": "Team Training",
+        "label": "",
+        "photo": "/assets/r11-team.jpg",
+        "photo_description": "Coach Sian leading a youth rugby league squad through a warm-up drill on the gym floor",
+        "position": "50% 50%",
+        "text": "Unlock your team's full potential with CrossFit Warrington. Our proven off-season training combines dynamic mobility, compound strength lifts, and high-intensity conditioning to build raw power, speed, endurance, and injury resilience.\n\nFully scalable for all levels—from youth squads to elite performers—our expert-led sessions have proudly powered top local clubs like the Warrington Wolves Youth and St Helens Women's Rugby League.",
+        "price_line": "",
+        "tall": false,
+        "links": [
+          {
+            "label": "Chat to us on WhatsApp",
+            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20team%20and%20group%20training."
+          },
+          {
+            "label": "Find out more",
+            "url": "/team-training"
+          }
+        ],
+        "row_of_four": true
       },
       {
         "title": "Nutrition Coaching",
@@ -249,26 +273,6 @@
           {
             "label": "Find out more",
             "url": "/online-coaching"
-          }
-        ]
-      },
-      {
-        "title": "Team Training",
-        "label": "",
-        "photo": "/assets/r11-team.jpg",
-        "photo_description": "Coach Sian leading a youth rugby league squad through a warm-up drill on the gym floor",
-        "position": "50% 50%",
-        "text": "Unlock your team's full potential with CrossFit Warrington. Our proven off-season training combines dynamic mobility, compound strength lifts, and high-intensity conditioning to build raw power, speed, endurance, and injury resilience.\n\nFully scalable for all levels—from youth squads to elite performers—our expert-led sessions have proudly powered top local clubs like the Warrington Wolves Youth and St Helens Women's Rugby League.",
-        "price_line": "",
-        "tall": false,
-        "links": [
-          {
-            "label": "Chat to us on WhatsApp",
-            "url": "https://wa.me/447853784258?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20team%20and%20group%20training."
-          },
-          {
-            "label": "Find out more",
-            "url": "/team-training"
           }
         ]
       }

@@ -62,7 +62,7 @@
       <div class="doors" data-sc-in data-sc-stagger="50">
         <div class="ways"><p class="kicker">{{join.kicker}}</p><h3>{{join.subheading}}</h3><p>{{join.intro}}</p></div>
         {{#join.tiles}}
-        <div class="door{{#tall}} door--member{{/tall}}"><img src="{{photo}}" alt="{{photo_description}}" width="1080" height="1350" loading="lazy"{{#position}} style="object-position: {{position}}"{{/position}}><div class="door__text">{{#label}}<small>{{label}}</small>{{/label}}<b>{{title}}</b>{{{text_html}}}{{#price_line}}<p class="door__from">{{price_line}}</p>{{/price_line}}<p class="door__links">{{#links}}<a{{#first}} class="go"{{/first}} href="{{url}}">{{label}}</a>{{/links}}</p></div></div>
+        <div class="door{{#tall}} door--member{{/tall}}{{#row_of_four}} door--four{{/row_of_four}}"><img src="{{photo}}" alt="{{photo_description}}" width="1080" height="1350" loading="lazy"{{#position}} style="object-position: {{position}}"{{/position}}><div class="door__text">{{#label}}<small>{{label}}</small>{{/label}}<b>{{title}}</b>{{{text_html}}}{{#price_line}}<p class="door__from">{{price_line}}</p>{{/price_line}}<p class="door__links">{{#links}}<a{{#first}} class="go"{{/first}} href="{{url}}">{{label}}</a>{{/links}}</p></div></div>
         {{/join.tiles}}
       </div>
       <aside class="dropin" data-sc-in>

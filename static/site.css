@@ -139,10 +139,11 @@
   .hub__head { margin-bottom: clamp(1.6rem, 4vw, 3rem); }
   
   /* Act 3: Join us. Nine tiles, 3 x 3: Foundations 1:1 / Foundations group / Experienced; Kids / Adaptive / RACE; Nutrition / PT / Online. Each has its own booking link from her site. */
-  .doors { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(.6rem, 1.2vw, 1rem); align-items: start; }
-  .door { grid-column: span 4; display: block; position: relative; background: var(--sc-surface); background-image: var(--wire-h); color: var(--sc-ink); text-decoration: none; border: 1px solid var(--iron); box-shadow: var(--edge); transition: border-color 160ms, transform 160ms var(--sc-ease-out); }
+  .doors { display: grid; grid-template-columns: repeat(12, 1fr); gap: clamp(.6rem, 1.2vw, 1rem); align-items: stretch; }   /* Ash, 7 Oct: tiles in a row share one height */
+  .door { grid-column: span 4; display: flex; flex-direction: column; position: relative; background: var(--sc-surface); background-image: var(--wire-h); color: var(--sc-ink); text-decoration: none; border: 1px solid var(--iron); box-shadow: var(--edge); transition: border-color 160ms, transform 160ms var(--sc-ease-out); }
   .door img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: 50% 30%; }   /* her photos are 4:5; 4/3 was taking heads off */
-  .door__text { padding: 1rem 1.1rem 1.2rem; }
+  .door img { flex: none; }
+  .door__text { padding: 1rem 1.1rem 1.2rem; flex: 1; display: flex; flex-direction: column; }
   .door small { display: block; font: 700 .64rem/1.2 var(--font-caption); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: .5rem; }
   .door b { display: block; font: 800 clamp(1.25rem, 1.7vw, 1.55rem)/1.1 var(--sc-font-display); margin-bottom: .45rem; color: var(--accent); }   /* Sian: titles in blue */
   .dropin { margin-top: clamp(1.6rem, 4vw, 2.6rem); display: grid; grid-template-columns: 1fr auto; gap: clamp(1.2rem, 3vw, 3rem); align-items: center; padding: clamp(1.2rem, 2.6vw, 2rem); background: var(--sc-surface); background-image: var(--wire-h); border: 1px solid var(--iron); box-shadow: var(--edge); }
@@ -152,7 +153,7 @@
   .dropin .cta { margin-top: 0; }
   @media (max-width: 860px) { .dropin { grid-template-columns: 1fr; } }
   .door__from { margin: .9rem 0 0; font: 700 1rem/1.3 var(--sc-font-display); color: var(--sc-ink); }
-  .door__links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin-top: .9rem; }
+  .door__links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: auto 0 0; padding-top: .9rem; }   /* links sit on the tile floor */
   .door__links a { font: 700 .74rem/1.3 var(--font-caption); color: var(--sc-ink); text-decoration: underline; text-underline-offset: .25em; text-decoration-color: var(--steel); position: relative; z-index: 1; }
   .door__links a.go { position: static; }
   .door__links a.go::after { content: ""; position: absolute; inset: 0; }   /* the whole card is the first link */
@@ -171,6 +172,9 @@
   @media (hover: hover) and (pointer: fine) { .door:hover { border-color: var(--accent); transform: translateY(-2px); } }
   .door:focus-within { border-color: var(--accent); }
   @media (max-width: 1000px) { .door { grid-column: span 6; } }
+  /* Ash, 7 Oct: rows of 3 / 4 / 3 so Team Training is not left alone; the four go 2 x 2 below 1200px where 4-across gets cramped */
+  .door--four { grid-column: span 3; }
+  @media (max-width: 1199px) { .door--four { grid-column: span 6; } }
   @media (max-width: 720px) { .door { grid-column: span 12; } .door img { aspect-ratio: 5 / 4; } }
 
   /* Act 4: the authored silence. One paragraph, held, beside one tall photograph. */

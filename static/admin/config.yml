@@ -136,6 +136,7 @@ collections:
                   - { name: text, label: "Words (**bold** for bold, a blank line between paragraphs)", widget: text }
                   - { name: price_line, label: "Price line", widget: string, required: false }
                   - { name: tall, label: "Tall tile (the membership tile)", widget: boolean, required: false }
+                  - { name: row_of_four, label: "In the row of four (Kids / Adaptive / RACE / Team Training)", widget: boolean, required: false }
                   - name: links
                     label: "Links (the first one makes the whole tile clickable)"
                     widget: list
