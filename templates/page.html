@@ -40,10 +40,13 @@
       {{#is_location}}
       <div class="findus" data-sc-in>
         <div class="map"><iframe src="https://www.google.com/maps?q=CrossFit%20Warrington%2C%2014%20Greys%20Court%2C%20Kingsland%20Grange%2C%20Warrington%20WA1%204SH&amp;output=embed" title="Map showing CrossFit Warrington" loading="lazy"></iframe></div>
-        <form class="contact" name="contact" method="POST" data-netlify="true" netlify-honeypot="company" action="/thank-you">
+        <!-- FormSubmit (free) emails each message to the gym; Netlify's form emails are paid. -->
+        <form class="contact" name="contact" method="POST" action="https://formsubmit.co/{{site.email}}">
           <h2>Drop us a line!</h2>
-          <input type="hidden" name="form-name" value="contact">
-          <p hidden><label>Leave this empty <input name="company"></label></p>
+          <input type="hidden" name="_subject" value="New message from the website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://crossfitwarrington.com/thank-you">
+          <p hidden><label>Leave this empty <input name="_honey"></label></p>
           <label>Name <input name="name" autocomplete="name"></label>
           <label>Email <input name="email" type="email" required autocomplete="email"></label>
           <label>Message <textarea name="message" rows="5"></textarea></label>
