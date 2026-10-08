@@ -43,6 +43,7 @@ We process your data under UK GDPR based on:
 We may share data with:
 
 -   WodBoard or payment processors
+-   FormSubmit, which delivers messages sent through our website contact form to our email
 -   Emergency services
 -   Legal authorities (if required)
 -   We never sell your personal data.
