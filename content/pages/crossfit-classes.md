@@ -8,7 +8,7 @@ photo: /assets/r6-15.jpg
 photo_description: Two members lifting barbells during a class
 ---
 
-[Find out more](https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Pass-6047)
+[Find out more](https://www.wodboard.com/locations/620/trials/bfa9cff5c7)
 
 ## Welcome
 
@@ -86,4 +86,4 @@ Located in Warrington, we have built a genuine fitness family where egos are lef
 
 Above all, we value inclusivity. Whether you are starting with our beginner Couch to CrossFit program, training in our Adaptive or Kids classes, or aiming for a new personal best at our CrossFit gym, YOU are our number one priority.
 
-[Book your free taster session](https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Pass-6047)
+[Book your free taster session](https://www.wodboard.com/locations/620/trials/bfa9cff5c7)

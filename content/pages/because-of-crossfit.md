@@ -35,7 +35,7 @@ Whether you want to run a 5k without losing your breath, build lean muscle, reco
 
 Ready to write your own "Because of CrossFit, I Can" story?
 
-[Get your free trial](https://www.wodboard.com/locations/620/signup/bfa9cff5c7?purchasable=Pass-6047)
+[Get your free trial](https://www.wodboard.com/locations/620/trials/bfa9cff5c7)
 
 ![Nick, an adaptive member, taking a drink between exercises](/assets/pages/because-of-crossfit-1.jpg)
 
