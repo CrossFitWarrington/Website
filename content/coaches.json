@@ -57,6 +57,14 @@
       "homepage_text": ""
     },
     {
+      "name": "Mark Dignam",
+      "role": "CrossFit Level 1 Trainer",
+      "experience": "Coach | CrossFit Level 1 Trainer",
+      "bio": "Mark is the newest coach on our team, now a qualified CrossFit Level 1 Trainer. You'll find him coaching on Tuesday and Friday evenings. Come and say hello!",
+      "photo": "/assets/coach-mark-coach.jpg",
+      "qualifications": "CF-L1"
+    },
+    {
       "photo_zoom": false,
       "qualifications": "CF-L1",
       "bio": "Jade is a Level 1 Coach with a true passion for weightlifting and gymnastics. She thrives on helping athletes unlock their potential — whether that’s hitting a new lift, mastering a bodyweight skill, or simply moving with more confidence.",
@@ -110,14 +118,6 @@
       "photo": "/assets/coach-colette.jpg",
       "role": "Intern and developing coach",
       "homepage_text": ""
-    },
-    {
-      "name": "Mark Dignam",
-      "role": "CrossFit Level 1 Trainer",
-      "experience": "Coach | CrossFit Level 1 Trainer",
-      "bio": "Mark is the newest coach on our team, now a qualified CrossFit Level 1 Trainer. You'll find him coaching on Tuesday and Friday evenings. Come and say hello!",
-      "photo": "/assets/coach-mark-coach.jpg",
-      "qualifications": "CF-L1"
     },
     {
       "name": "Leanne Smith",
