@@ -113,10 +113,18 @@
     },
     {
       "name": "Mark Dignam",
-      "role": "Intern and developing coach",
-      "experience": "Intern and developing coach",
-      "bio": "Mark is the newest member of our coaching team. He's working towards his CrossFit Level 1 and you'll find him coaching on Tuesday and Friday evenings. Come and say hello!",
-      "photo": "/assets/coach-mark.jpg"
+      "role": "CrossFit Level 1 Trainer",
+      "experience": "Coach | CrossFit Level 1 Trainer",
+      "bio": "Mark is the newest coach on our team, now a qualified CrossFit Level 1 Trainer. You'll find him coaching on Tuesday and Friday evenings. Come and say hello!",
+      "photo": "/assets/coach-mark-coach.jpg",
+      "qualifications": "CF-L1"
+    },
+    {
+      "name": "Leanne Smith",
+      "role": "Couch to CrossFit Intern",
+      "experience": "Couch to CrossFit Intern",
+      "bio": "Leanne is the newest intern on our team, helping out on Couch to CrossFit. She's building her coaching experience while supporting our newest members through their first steps. Come and say hello!",
+      "photo": "/assets/coach-leanne-intern.jpg"
     }
   ]
 }
